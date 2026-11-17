@@ -1,15 +1,24 @@
 # Maintenance Scripts
 
-This directory will contain reproducible scripts for repository maintenance.
+Scripts in this directory support repeatable repository maintenance.
 
-Planned tools:
-- content metadata and schema validation;
-- broken-link and source checks;
-- translation parity reporting;
-- terminology consistency checks;
-- search-index generation;
-- knowledge-graph validation;
-- supported code-example tests;
-- stale-content and version review reports.
+## Available
+
+- `validate_structure.py` — validates registries, JSON Schemas, content frontmatter, language profiles, knowledge-graph references, required files, relative Markdown links, and the bilingual 40-language workbook contract.
+
+Run locally:
+
+```
+python -m pip install -r requirements-dev.txt
+python scripts/validate_structure.py
+```
+
+## Planned
+
+- External-link and source-freshness checks.
+- Pinned-toolchain compilation and execution of supported code examples.
+- Translation parity and terminology reports beyond heading-level parity.
+- Search-index generation.
+- Stale-content and version-review reports.
 
 Scripts should be deterministic, documented, safe by default, and usable in local development and CI. Avoid network calls unless explicitly requested by the script's purpose.
