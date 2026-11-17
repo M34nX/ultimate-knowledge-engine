@@ -15,16 +15,17 @@ This domain turns knowledge into applied work and introduces disciplined technic
 - Writing technical reports and documenting decisions.
 - Portfolio quality, maintenance, and responsible collaboration.
 
-## Project standard
-
-Every project should state prerequisites, scope, deliverables, constraints, evaluation criteria, safety considerations, and opportunities for extension. Avoid projects that require paid services or personal data unless safe alternatives are provided.
-
 ## Build from Scratch Academy
 
-Original starter curricula with lessons, exercises, and project milestones:
-- [Academy overview](../../../learning/build-from-scratch/README.md)
+The academy provides direct-entry project tracks. Available lessons are marked Draft until editorial and technical review is complete.
+
+- [Academy catalogue and all categories](../../../learning/build-from-scratch/README.md)
 - [Tiny AI model](../../../learning/build-from-scratch/ai-model/README.md)
 - [2D game](../../../learning/build-from-scratch/game-development/README.md)
-- [Operating-system simulator](../../../learning/build-from-scratch/operating-systems/README.md)
+- [Operating-system concepts simulator](../../../learning/build-from-scratch/operating-systems/README.md)
+- [Tiny database engine](../../../learning/build-from-scratch/database-engine/README.md)
+- [Small programming language](../../../learning/build-from-scratch/compiler/README.md)
+- [Local network service](../../../learning/build-from-scratch/network-server/README.md)
+- [Small search engine](../../../learning/build-from-scratch/search-engine/README.md)
 
-External resources are linked to their original publishers, not reproduced.
+Every project should state prerequisites, scope, deliverables, constraints, evaluation criteria, safety considerations, and opportunities for extension. External resources remain with their publishers; UKE links to them rather than copying them.
