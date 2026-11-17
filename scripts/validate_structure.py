@@ -137,6 +137,67 @@ def validate_internal_links() -> int:
     return checked
 
 
+
+WORKBOOK_PATHS = {
+    "en": ROOT / "learning" / "programming-languages" / "40-language-workbook.md",
+    "fa": ROOT / "learning" / "programming-languages" / "40-language-workbook.fa.md",
+}
+WORKBOOK_HEADINGS = re.compile(r"(?m)^###\s+(\d{2})\.\s+(.+?)\s*$")
+WORKBOOK_LANGUAGE_IDS = {
+    "Python": "python", "JavaScript": "javascript", "TypeScript": "typescript",
+    "Java": "java", "C": "c", "C++": "cpp", "C#": "csharp", "Go": "go",
+    "Rust": "rust", "PHP": "php", "Ruby": "ruby", "Swift": "swift",
+    "Kotlin": "kotlin", "Dart": "dart", "R": "r", "Julia": "julia",
+    "MATLAB": "matlab", "Scala": "scala", "Haskell": "haskell",
+    "Elixir": "elixir", "Erlang": "erlang", "Clojure": "clojure",
+    "OCaml": "ocaml", "F#": "fsharp", "Lua": "lua", "Perl": "perl",
+    "Bash": "bash", "PowerShell": "powershell", "Fortran": "fortran",
+    "COBOL": "cobol", "Ada": "ada", "Pascal": "pascal", "Groovy": "groovy",
+    "Solidity": "solidity", "Move": "move", "Zig": "zig",
+    "GDScript": "gdscript", "Vyper": "vyper", "Objective-C": "objective_c",
+    "Assembly (x86-64 NASM)": "assembly",
+}
+
+
+def validate_programming_workbooks(language_ids: set[str]) -> int:
+    """Check count, numbering, bilingual parity, examples, extensions, and registry coverage."""
+    names_by_locale: dict[str, list[str]] = {}
+    fence = chr(96) * 3
+    marker = chr(96)
+    for locale, path in WORKBOOK_PATHS.items():
+        if not path.is_file():
+            add_error(f"Missing {locale} programming-language workbook: {path.relative_to(ROOT)}")
+            continue
+        text = path.read_text(encoding="utf-8")
+        headings = list(WORKBOOK_HEADINGS.finditer(text))
+        numbers = [int(m.group(1)) for m in headings]
+        names = [m.group(2).strip() for m in headings]
+        names_by_locale[locale] = names
+        if len(headings) != 40:
+            add_error(f"{path.relative_to(ROOT)} must contain exactly 40 examples; found {len(headings)}.")
+        if numbers != list(range(1, 41)):
+            add_error(f"{path.relative_to(ROOT)} example numbers must be consecutive from 01 to 40.")
+        if len(set(names)) != len(names):
+            add_error(f"{path.relative_to(ROOT)} contains duplicate language headings.")
+        for index, heading in enumerate(headings):
+            end = headings[index + 1].start() if index + 1 < len(headings) else len(text)
+            section = text[heading.end():end]
+            name = heading.group(2).strip()
+            if len(re.findall(r"(?m)^" + re.escape(fence), section)) < 2:
+                add_error(f"{path.relative_to(ROOT)} has no complete fenced code sample for {name}.")
+            ext_pattern = r"(?m)^\*\*File extension:\*\* " + re.escape(marker) + r"\.[A-Za-z0-9]+" + re.escape(marker) + "$"
+            if not re.search(ext_pattern, section):
+                add_error(f"{path.relative_to(ROOT)} has no explicit file extension for {name}.")
+            lang_id = WORKBOOK_LANGUAGE_IDS.get(name)
+            if lang_id is None:
+                add_error(f"Unmapped workbook language in {path.relative_to(ROOT)}: {name}")
+            elif lang_id not in language_ids:
+                add_error(f"Workbook language is missing from registry: {name} ({lang_id})")
+    if "en" in names_by_locale and "fa" in names_by_locale and names_by_locale["en"] != names_by_locale["fa"]:
+        add_error("English and Persian programming-language workbooks have different language order or headings.")
+    return min(len(names_by_locale.get("en", [])), len(names_by_locale.get("fa", [])))
+
+
 def main() -> int:
     validators = load_schemas()
     domains_data = read_yaml(ROOT / "registry" / "domains.yaml") or {}
@@ -206,6 +267,7 @@ def main() -> int:
         add_error("No shared stable content IDs found between en and fa.")
 
     checked_links = validate_internal_links()
+    validated_workbook_examples = validate_programming_workbooks(set(language_ids))
     if ERRORS:
         print("UKE validation failed:")
         for item in ERRORS:
@@ -219,6 +281,7 @@ def main() -> int:
     print(f" - {len(nodes)} knowledge graph nodes and {len(edges)} relationships")
     print(f" - {len(shared)} shared English/Persian content IDs")
     print(f" - {checked_links} internal Markdown links checked")
+    print(f" - {validated_workbook_examples} examples checked in each programming-language workbook")
     return 0
 
 
