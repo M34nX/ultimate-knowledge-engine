@@ -17,12 +17,14 @@ This page distinguishes published foundations from work in progress. A listed ca
 - Build from Scratch starter tracks for AI, 2D game development, and operating-system concepts.
 - Additional bilingual draft tracks for database engines, compilers, local network services, and search engines.
 - A direct-link academy catalogue with planned categories clearly separated from available draft lessons.
+- Bilingual 40-language starter workbooks with corrected 01–40 numbering, explicit source-file extensions, and registry-coverage checks.
+- An automated structural validator covering schemas, registries, metadata, graph references, relative Markdown links, and workbook consistency.
 
 ## In progress for v0.2.0
 
 - Expand and review the Build from Scratch curriculum.
 - Improve README navigation and repository presentation.
-- Add automated checks for internal links, translation parity, lesson metadata, and code examples.
+- Extend automated checks to external-link health, deeper translation parity, executable code examples, and pinned toolchains.
 - Verify all new external references and technical examples.
 - Establish release notes and a repeatable release checklist.
 
@@ -35,7 +37,7 @@ This page distinguishes published foundations from work in progress. A listed ca
 - Interactive code execution and visual simulators.
 - Learner accounts, progress tracking, and adaptive learning.
 - AI-assisted tutoring.
-- Comprehensive automated validation and CI coverage.
+- Comprehensive automated validation and CI coverage beyond the current structural checks.
 
 ## Definition of done
 
