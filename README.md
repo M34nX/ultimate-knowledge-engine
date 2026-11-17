@@ -1,91 +1,86 @@
 # ULTIMATE KNOWLEDGE ENGINE
 
 <p align="center">
-  <img src="assets/brand/uke-symbol.svg" alt="UKE Cyber Blue symbol" width="112" />
+  <img src="assets/brand/uke-symbol.svg" alt="UKE connected knowledge symbol" width="104" />
 </p>
 
-<p align="center"><strong>Cyber Blue</strong> · The visual identity for the UKE knowledge ecosystem · <a href="docs/brand-system.md">Brand system</a></p>
+<h3 align="center">One Knowledge Base. Multiple Learning Experiences. Global Knowledge.</h3>
 
-**The Complete Multilingual Programming & Computer Science Knowledge System**
+<p align="center">
+  <strong>A multilingual knowledge and learning system for programming, computer science, and software engineering.</strong>
+</p>
 
-> One Knowledge Base. Multiple Learning Experiences. Global Knowledge.
+<p align="center">
+  <a href="content/fa/README.md">فارسی</a> ·
+  <a href="START-HERE.md">Start here</a> ·
+  <a href="learning/README.md">Learning academy</a> ·
+  <a href="docs/roadmap.md">Roadmap</a> ·
+  <a href="CONTRIBUTING.md">Contribute</a>
+</p>
 
-Ultimate Knowledge Engine (UKE) is a long-term project to create a structured, multilingual knowledge and learning ecosystem for programming, computer science, software engineering, and related fields.
+---
 
-[فارسی](content/fa/README.md) · [Start here](START-HERE.md) · [Roadmap](docs/roadmap.md) · [Contributing](CONTRIBUTING.md)
+## What is UKE?
 
-## Mission
+Ultimate Knowledge Engine (UKE) is a long-term, repository-first knowledge ecosystem. It connects five experiences through one reviewed source of truth:
 
-Build one reliable knowledge base that supports five connected experiences:
-
-1. **Encyclopedia** — rigorous explanations of concepts, technologies, and computer-science foundations.
-2. **Technical dictionary** — terminology, syntax, built-ins, APIs, errors, and cross-language comparisons.
-3. **Learning academy** — roadmaps, lessons, exercises, quizzes, and projects from beginner to specialist.
-4. **Interactive laboratory** — isolated code practice and visual learning tools.
-5. **Knowledge engine** — multilingual discovery, prerequisite maps, relationships, and version-aware navigation.
-
-The repository is the canonical source of truth. A future website will be generated from the same reviewed content.
-
-## Current stage
-
-**Foundation / v0.1.0 — initial construction.** The architecture and standards are established as a starting point. Planned features and registry entries do not imply that every lesson, translation, or application already exists.
-
-| Dimension | Long-term target |
+| Experience | What it provides |
 |---|---|
-| Knowledge domains | 12 top-level domains |
-| Languages and technologies | Broad registry; expandable beyond 50 |
-| Content locales | Architecture ready for 20–30+ locales |
-| Learning levels | Beginner, intermediate, advanced, specialist |
-| Content | Markdown/MDX with structured metadata |
-| Website | Generated from canonical repository content |
-| Code execution | Optional isolated infrastructure, never the production web process |
+| **Encyclopedia** | Structured explanations of concepts, technologies, and computer-science foundations |
+| **Technical dictionary** | Terminology, syntax, built-ins, APIs, errors, and cross-language comparisons |
+| **Learning academy** | Roadmaps, lessons, exercises, assessments, and build-from-scratch projects |
+| **Interactive laboratory** | A future home for isolated code practice and visual learning tools |
+| **Knowledge engine** | Multilingual discovery, prerequisites, relationships, and version-aware navigation |
 
-See [PROJECT-STATUS.md](PROJECT-STATUS.md) and [the roadmap](docs/roadmap.md).
+The repository is canonical. A future website is intended to be generated from the same reviewed content.
 
-## Knowledge domains
+## Start here
+
+- **I want to learn:** open the [Learning Academy](learning/README.md) or go directly to [Build from Scratch](learning/build-from-scratch/README.md).
+- **I want to explore a subject:** choose one of the [12 knowledge domains](#knowledge-map).
+- **I want to contribute:** read [Contributing](CONTRIBUTING.md) and the [editorial policy](docs/editorial-policy.md).
+- **I want to understand the project:** read [Start Here](START-HERE.md), [Project Status](PROJECT-STATUS.md), and the [Roadmap](docs/roadmap.md).
+
+## Build from Scratch Academy
+
+Learn by building small, understandable versions of real systems. The catalogue has direct lesson links, English and Persian drafts, and a clear separation between available and planned tracks.
+
+| Category | Direct entry |
+|---|---|
+| Artificial intelligence | [Tiny AI model](learning/build-from-scratch/ai-model/README.md) |
+| Game development | [2D game](learning/build-from-scratch/game-development/README.md) |
+| Operating systems | [OS concepts simulator](learning/build-from-scratch/operating-systems/README.md) |
+| Database systems | [Tiny database engine](learning/build-from-scratch/database-engine/README.md) |
+| Compilers and languages | [Small programming language](learning/build-from-scratch/compiler/README.md) |
+| Networking and servers | [Local network service](learning/build-from-scratch/network-server/README.md) |
+| Search and information retrieval | [Small search engine](learning/build-from-scratch/search-engine/README.md) |
+
+[Open the complete academy catalogue](learning/build-from-scratch/README.md) for Persian links, levels, learning steps, and planned categories.
+
+## Knowledge map
 
 | ID | Domain | Scope |
 |---|---|---|
-| 00 | Core & Navigation | Orientation, learning methods, project standards |
-| 01 | Programming Languages | Language guides, syntax, runtimes, ecosystems |
-| 02 | Computer Science | Algorithms, data structures, computation, theory |
-| 03 | Software Engineering | Design, architecture, testing, maintenance |
-| 04 | Web & App Development | Frontend, backend, mobile, APIs |
-| 05 | AI & Data Science | Statistics, ML, deep learning, data engineering |
-| 06 | Systems & Networking | Architecture, operating systems, networks |
-| 07 | DevOps & Cloud | Delivery, infrastructure, containers, cloud |
-| 08 | Cybersecurity | Secure development, privacy, defensive security |
-| 09 | Databases | Data modelling, SQL, NoSQL, transactions |
-| 10 | Mathematics | Discrete mathematics, logic, statistics |
-| 11 | Projects & Research | Guided projects, case studies, research literacy |
+| 00 | [Core & Navigation](content/en/core-and-navigation/README.md) | Orientation, learning methods, standards |
+| 01 | [Programming Languages](content/en/programming-languages/README.md) | Languages, syntax, types, runtimes |
+| 02 | [Computer Science](content/en/computer-science/README.md) | Algorithms, data structures, theory |
+| 03 | [Software Engineering](content/en/software-engineering/README.md) | Design, architecture, testing, maintenance |
+| 04 | [Web & App Development](content/en/web-and-app-development/README.md) | Frontend, backend, mobile, APIs |
+| 05 | [AI & Data Science](content/en/ai-and-data-science/README.md) | Statistics, machine learning, data |
+| 06 | [Systems & Networking](content/en/systems-and-networking/README.md) | Architecture, operating systems, networks |
+| 07 | [DevOps & Cloud](content/en/devops-and-cloud/README.md) | Delivery, infrastructure, containers |
+| 08 | [Cybersecurity](content/en/cybersecurity/README.md) | Secure development and defensive security |
+| 09 | [Databases](content/en/databases/README.md) | Data modelling, SQL, storage, transactions |
+| 10 | [Mathematics](content/en/mathematics/README.md) | Logic, discrete maths, algebra, statistics |
+| 11 | [Projects & Research](content/en/projects-and-research/README.md) | Guided projects and technical research |
 
-The [domain registry](registry/domains.yaml) defines the canonical taxonomy. Each initial locale has a landing page for all 12 domains.
+## Project stage
 
-## Language coverage
+- **Published baseline:** v0.1.0
+- **Next development target:** v0.2.0 (not released)
+- **Current focus:** academy navigation, bilingual draft curricula, repository quality, and validation.
 
-The planned registry spans web, data, systems, enterprise, mobile, game, functional, scripting, embedded, legacy, and specialist ecosystems. Initial examples include Python, JavaScript, TypeScript, Java, C, C++, C#, Go, Rust, PHP, Ruby, Swift, Kotlin, Dart, R, Julia, SQL, Bash, PowerShell, Haskell, Elixir, Erlang, Clojure, OCaml, F#, COBOL, Fortran, Ada, and Solidity.
-
-See [registry/languages.yaml](registry/languages.yaml). Registry inclusion means tracked scope, not a completed or reviewed guide.
-
-## Multilingual by design
-
-Each concept has a stable identity independent of its display language. English is the initial technical reference locale; Persian is a first-class initial locale. Other locales can be added without changing concept IDs.
-
-The locale registry contains initial English and Persian plus 25 planned additional locales. Translation status must be explicit: missing or unreviewed text must never be presented as complete.
-
-## Quality principles
-
-- Accuracy is more important than volume.
-- Important technical claims must be traceable to sources.
-- Version-sensitive information must identify its scope.
-- Code examples should be reproducible and tested where feasible.
-- Translations must preserve technical meaning and teaching intent.
-- Third-party material may only be reused under a compatible licence.
-- Public visibility does not automatically grant copying permission.
-- Security, accessibility, and maintainability are design requirements.
-- Unreviewed content must be labelled honestly.
-
-Read the [editorial policy](docs/editorial-policy.md), [source standard](docs/standards/citations-and-sources.md), and [content lifecycle](docs/standards/content-lifecycle.md).
+The project is under active construction. A registry entry or draft lesson does not mean a complete, reviewed guide exists. See [Project Status](PROJECT-STATUS.md) and [Changelog](CHANGELOG.md).
 
 ## Repository map
 
@@ -99,23 +94,24 @@ Read the [editorial policy](docs/editorial-policy.md), [source standard](docs/st
 - `references/` — curated external sources and learning resources.
 - `docs/` — architecture, governance, standards, and roadmap.
 - `apps/` — future web encyclopedia and supporting applications.
-- `scripts/` — validation, indexing, and maintenance tooling.
-- `tests/` — structural, content, translation, and code-example checks.
+- `scripts/` and `tests/` — validation and maintenance tooling.
 
-## Quick start
+## Quality principles
 
-1. Read [START-HERE.md](START-HERE.md).
-2. Review the [content model](docs/architecture/content-model.md).
-3. Use a template from `templates/` for a new concept or lesson.
-4. Check [CONTRIBUTING.md](CONTRIBUTING.md).
-5. Submit focused changes with sources and version information.
+- Accuracy before volume; sources before unsupported claims.
+- Version-sensitive content states its version scope.
+- Code examples are tested before being marked verified.
+- Translations preserve technical meaning and teaching intent.
+- Third-party tutorials are linked, not copied without permission.
+- Draft, reviewed, verified, and outdated states remain explicit.
+- Security, accessibility, and maintainability are requirements, not decoration.
 
-For local foundation checks, install [requirements-dev.txt](requirements-dev.txt) and run `python scripts/validate_structure.py`.
+Read the [editorial policy](docs/editorial-policy.md), [source standard](docs/standards/citations-and-sources.md), and [content lifecycle](docs/standards/content-lifecycle.md).
 
 ## Licence
 
-The project licence has not yet been selected. A public repository is not automatically public domain or open source. Until a licence is added, do not assume that repository contents may be copied, redistributed, or modified. See [LICENSE-POLICY.md](LICENSE-POLICY.md).
+The project licence has not yet been selected. A public repository is not automatically public domain or open source. Do not assume repository contents may be copied, redistributed, or modified. See [LICENSE-POLICY.md](LICENSE-POLICY.md).
 
-## Community
+---
 
-Use the issue templates for proposals and bug reports. Contributions should be respectful, source-backed, and reviewable. See [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) and [GOVERNANCE.md](GOVERNANCE.md).
+<p align="center"><sub>UKE · Cyber Blue identity · Built as a careful, verifiable knowledge system.</sub></p>
