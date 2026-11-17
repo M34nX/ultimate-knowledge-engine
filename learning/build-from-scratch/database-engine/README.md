@@ -1,3 +1,30 @@
+---
+id: build-from-scratch.database-engine
+title: "Build a Tiny Database Engine"
+content_type: project
+locale: en
+domain: databases
+level: intermediate
+status: draft
+learning_objectives:
+  - "Represent tables, schemas, rows, and validated values."
+  - "Implement insert, select, update, and delete."
+  - "Compare linear scans with a simple index."
+  - "Model rollback and file persistence."
+  - "Test invalid input and document limitations."
+prerequisites:
+  - "Functions and classes or records"
+  - "Maps, lists, and file I/O"
+  - "Basic algorithm analysis"
+milestones:
+  - "Create tables and validate schemas."
+  - "Insert rows and reject invalid values."
+  - "Select rows with filters."
+  - "Update and delete rows."
+  - "Build and benchmark an index."
+  - "Save, reload, and test rollback."
+---
+
 # Build a Tiny Database Engine
 
 **Level:** Intermediate · **Language:** Python · **Status:** Draft
