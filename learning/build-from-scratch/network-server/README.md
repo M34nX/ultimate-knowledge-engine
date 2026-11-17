@@ -1,3 +1,29 @@
+---
+id: build-from-scratch.network-server
+title: "Build a Local Network Service"
+content_type: project
+locale: en
+domain: systems-and-networking
+level: intermediate
+status: draft
+learning_objectives:
+  - "Explain HTTP requests, responses, methods, headers, and status codes."
+  - "Build a localhost-only service with route handlers."
+  - "Validate JSON input and return consistent errors."
+  - "Write local integration tests and safe-shutdown guidance."
+  - "Limit exercises to systems the learner owns or may test."
+prerequisites:
+  - "Functions and JSON"
+  - "HTTP basics"
+  - "Command-line use"
+milestones:
+  - "Return a health response on localhost."
+  - "Add two routes and JSON output."
+  - "Validate input and return suitable status codes."
+  - "Test successful and failing requests."
+  - "Document timeouts and safe shutdown."
+---
+
 # Build a Local Network Service
 
 **Level:** Intermediate · **Language:** Python or JavaScript · **Status:** Draft
