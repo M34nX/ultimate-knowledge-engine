@@ -16,7 +16,7 @@ concepts:
   - python.types
   - python.type-conversion
 sources:
-  - python-standard-library
+  - python-docs
 estimated_minutes: 25
 version_scope:
   minimum: "3"
