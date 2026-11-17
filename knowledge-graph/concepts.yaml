@@ -1,0 +1,34 @@
+schema_version: 1
+nodes:
+  - id: python.functions.basics
+    entity_type: lesson
+    title:
+      en: Python Functions — First Principles
+      fa: آشنایی با توابع در پایتون
+    domain: programming-languages
+    status: draft
+    locales: [en, fa]
+  - id: python.functions.parameters
+    entity_type: concept
+    title:
+      en: Function Parameters and Arguments
+      fa: پارامترها و آرگومان‌های تابع
+    domain: programming-languages
+    status: planned
+    locales: []
+  - id: python.functions.return-values
+    entity_type: concept
+    title:
+      en: Function Return Values
+      fa: مقادیر بازگشتی تابع
+    domain: programming-languages
+    status: planned
+    locales: []
+  - id: cs.algorithms.binary-search
+    entity_type: concept
+    title:
+      en: Binary Search
+      fa: جست‌وجوی دودویی
+    domain: computer-science
+    status: planned
+    locales: []

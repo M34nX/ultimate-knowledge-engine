@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/M34nX/ultimate-knowledge-engine/main/schemas/language.schema.json",
+  "title": "UKE Language Profile",
+  "type": "object",
+  "required": ["id", "name", "kind", "status", "paradigms", "domains"],
+  "properties": {
+    "id": { "type": "string", "pattern": "^[a-z0-9_]+$" },
+    "name": { "type": "string", "minLength": 1 },
+    "kind": { "type": "string" },
+    "status": { "enum": ["planned", "draft", "reviewed", "verified", "published", "outdated", "deprecated"] },
+    "paradigms": { "type": "array", "items": { "type": "string" } },
+    "domains": { "type": "array", "items": { "type": "string" } },
+    "first_release": { "type": "string" },
+    "current_stable_version": { "type": "string" },
+    "version_reviewed_on": {
+      "oneOf": [
+        { "type": "null" },
+        { "type": "string", "format": "date" }
+      ]
+    },
+    "typing_model": { "type": "string" },
+    "execution_model": { "type": "string" },
+    "memory_model": { "type": "string" },
+    "official_homepage": { "type": "string", "format": "uri" },
+    "official_documentation": { "type": "string", "format": "uri" },
+    "package_ecosystem": { "type": "string" },
+    "tooling": { "type": "array", "items": { "type": "string" } },
+    "learning_path": { "type": "object" },
+    "sources": { "type": "array", "items": { "type": "string" } },
+    "editorial_notes": { "type": "string" }
+  },
+  "additionalProperties": true
+}

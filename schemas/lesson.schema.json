@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://example.invalid/uke/schemas/lesson.schema.json",
+  "$id": "https://raw.githubusercontent.com/M34nX/ultimate-knowledge-engine/main/schemas/lesson.schema.json",
   "title": "UKE Lesson Metadata",
   "type": "object",
   "additionalProperties": false,
@@ -19,6 +19,15 @@
     "sources": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
     "estimated_minutes": { "type": "integer", "minimum": 1 },
     "translation_of": { "type": "string" },
-    "last_reviewed": { "type": "string", "format": "date" }
+    "last_reviewed": { "type": "string", "format": "date" },
+    "version_scope": {
+      "type": "object",
+      "properties": {
+        "minimum": { "type": ["string", "null"] },
+        "maximum": { "type": ["string", "null"] },
+        "notes": { "type": "string" }
+      },
+      "additionalProperties": false
+    }
   }
 }

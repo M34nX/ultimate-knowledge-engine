@@ -1,0 +1,10 @@
+schema_version: 1
+relationships:
+  - from: python.functions.basics
+    type: introduces
+    to: python.functions.parameters
+    rationale: The sample lesson introduces the distinction between parameters and arguments.
+  - from: python.functions.basics
+    type: introduces
+    to: python.functions.return-values
+    rationale: The sample lesson introduces return statements and returned values.

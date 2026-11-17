@@ -17,8 +17,8 @@ version_reviewed_on: null
 typing_model: dynamic
 execution_model: host- and engine-dependent; distinguish language semantics from browser and server runtimes
 memory_model: automatic memory management; specify engine behaviour only with sourced version scope
-official_homepage: https://developer.mozilla.org/en-US/docs/Web/JavaScript
-official_documentation: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide
+official_homepage: https://tc39.es/
+official_documentation: https://tc39.es/ecma262/
 package_ecosystem: npm
 tooling:
   - Node.js
@@ -31,4 +31,5 @@ learning_path:
 sources:
   - mdn-web-docs
 editorial_notes: >
-  Proposed profile. Distinguish ECMAScript language features from browser APIs and runtime-specific APIs.
+  Proposed profile. The ECMAScript specification defines the language; MDN is a useful
+  secondary learning reference. Distinguish ECMAScript features from host APIs.

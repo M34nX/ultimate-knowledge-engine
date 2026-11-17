@@ -35,7 +35,7 @@ domains:
   - id: "08"
     slug: cybersecurity
     name: Cybersecurity
-    description: Defensive security, secure software, cryptography foundations, privacy, and risk.
+    description: Secure development, privacy, cryptography foundations, defensive security, and risk.
   - id: "09"
     slug: databases
     name: Databases

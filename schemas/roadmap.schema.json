@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/M34nX/ultimate-knowledge-engine/main/schemas/roadmap.schema.json",
+  "title": "UKE Learning Roadmap",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "title", "locale", "status", "target_capability", "steps"],
+  "properties": {
+    "id": { "type": "string", "pattern": "^[a-z0-9]+([.-][a-z0-9]+)*$" },
+    "title": { "type": "string" },
+    "locale": { "type": "string" },
+    "status": { "enum": ["draft", "reviewed", "verified", "published", "outdated", "deprecated"] },
+    "target_capability": { "type": "string", "minLength": 10 },
+    "starting_level": { "enum": ["beginner", "intermediate", "advanced", "specialist"] },
+    "prerequisites": { "type": "array", "items": { "type": "string" } },
+    "steps": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["title", "outcomes"],
+        "properties": {
+          "title": { "type": "string" },
+          "outcomes": { "type": "array", "minItems": 1, "items": { "type": "string" } },
+          "content_ids": { "type": "array", "items": { "type": "string" } },
+          "optional": { "type": "boolean" }
+        },
+        "additionalProperties": false
+      }
+    },
+    "sources": { "type": "array", "items": { "type": "string" } },
+    "last_reviewed": { "type": "string", "format": "date" }
+  }
+}

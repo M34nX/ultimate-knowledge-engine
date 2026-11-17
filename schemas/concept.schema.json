@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://example.invalid/uke/schemas/concept.schema.json",
+  "$id": "https://raw.githubusercontent.com/M34nX/ultimate-knowledge-engine/main/schemas/concept.schema.json",
   "title": "UKE Concept Metadata",
   "type": "object",
   "additionalProperties": false,

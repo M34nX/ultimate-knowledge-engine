@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://example.invalid/uke/schemas/exercise.schema.json",
+  "$id": "https://raw.githubusercontent.com/M34nX/ultimate-knowledge-engine/main/schemas/exercise.schema.json",
   "title": "UKE Exercise Metadata",
   "type": "object",
   "additionalProperties": false,

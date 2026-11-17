@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://example.invalid/uke/schemas/reference.schema.json",
+  "$id": "https://raw.githubusercontent.com/M34nX/ultimate-knowledge-engine/main/schemas/reference.schema.json",
   "title": "UKE External Reference Metadata",
   "type": "object",
   "additionalProperties": false,
