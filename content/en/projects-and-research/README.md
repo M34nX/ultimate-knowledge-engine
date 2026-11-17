@@ -18,3 +18,13 @@ This domain turns knowledge into applied work and introduces disciplined technic
 ## Project standard
 
 Every project should state prerequisites, scope, deliverables, constraints, evaluation criteria, safety considerations, and opportunities for extension. Avoid projects that require paid services or personal data unless safe alternatives are provided.
+
+## Build from Scratch Academy
+
+Original starter curricula with lessons, exercises, and project milestones:
+- [Academy overview](../../../learning/build-from-scratch/README.md)
+- [Tiny AI model](../../../learning/build-from-scratch/ai-model/README.md)
+- [2D game](../../../learning/build-from-scratch/game-development/README.md)
+- [Operating-system simulator](../../../learning/build-from-scratch/operating-systems/README.md)
+
+External resources are linked to their original publishers, not reproduced.
