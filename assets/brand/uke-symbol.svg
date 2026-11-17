@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title desc">
+  <title id="title">UKE Cyber Blue symbol</title>
+  <desc id="desc">A connected knowledge network inside a geometric frame.</desc>
+  <defs>
+    <linearGradient id="uke-blue" x1="18" y1="18" x2="108" y2="110" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#35D6F2"/>
+      <stop offset="1" stop-color="#1677FF"/>
+    </linearGradient>
+  </defs>
+  <path d="M64 8 112 36v56l-48 28L16 92V36L64 8Z" fill="#0B1F36" stroke="#24415F" stroke-width="3"/>
+  <path d="M38 43 64 64 91 40M38 43 35 84 64 64 94 86M91 40 94 86M35 84 64 104 94 86" fill="none" stroke="url(#uke-blue)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="38" cy="43" r="8" fill="#35D6F2"/>
+  <circle cx="91" cy="40" r="8" fill="#1677FF"/>
+  <circle cx="64" cy="64" r="10" fill="#EAF4FF" stroke="#1677FF" stroke-width="4"/>
+  <circle cx="35" cy="84" r="7" fill="#1677FF"/>
+  <circle cx="94" cy="86" r="7" fill="#35D6F2"/>
+  <circle cx="64" cy="104" r="6" fill="#368BFF"/>
+</svg>
