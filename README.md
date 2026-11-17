@@ -41,6 +41,10 @@ The repository is canonical. A future website is intended to be generated from t
 - **I want to contribute:** read [Contributing](CONTRIBUTING.md) and the [editorial policy](docs/editorial-policy.md).
 - **I want to understand the project:** read [Start Here](START-HERE.md), [Project Status](PROJECT-STATUS.md), and the [Roadmap](docs/roadmap.md).
 
+## 40 programming languages
+
+Learn with categorized examples across 40 programming languages, with English and Persian workbooks: [40-language workbook](learning/programming-languages/40-language-workbook.md) · [دفترچه فارسی](learning/programming-languages/40-language-workbook.fa.md).
+
 ## Build from Scratch Academy
 
 Learn by building small, understandable versions of real systems. The catalogue has direct lesson links, English and Persian drafts, and a clear separation between available and planned tracks.
