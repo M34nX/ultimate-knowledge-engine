@@ -16,7 +16,7 @@ concepts:
   - python.control-flow
   - python.boolean-expressions
 sources:
-  - python-tutorial
+  - python-docs
 estimated_minutes: 25
 version_scope:
   minimum: "3"
