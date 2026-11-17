@@ -16,3 +16,8 @@ Learn how real technologies work by building small, understandable versions. Thi
 
 ## Source and safety policy
 UKE lesson text and exercises are original unless attributed. External tutorials remain the property of their publishers; this project links to them rather than copying them. Verify availability, version, and licence before reuse. Keep OS experiments in user space or a disposable virtual machine; do not run experimental kernels on a primary device. Use public, appropriately licensed datasets and game assets.
+
+## فارسی
+- [راهنمای فارسی ساخت مدل هوش مصنوعی](ai-model/README.fa.md)
+- [راهنمای فارسی ساخت بازی دوبعدی](game-development/README.fa.md)
+- [راهنمای فارسی مفاهیم سیستم‌عامل](operating-systems/README.fa.md)
