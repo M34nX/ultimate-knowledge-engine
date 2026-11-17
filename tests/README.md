@@ -2,17 +2,33 @@
 
 Tests protect content integrity, not merely application behaviour.
 
-## Planned test layers
+## Automated checks currently run in GitHub Actions
 
-- **Structure:** required files, directories, and navigation references.
-- **Metadata:** YAML frontmatter and JSON Schema validation.
-- **Links:** internal anchors, local paths, and external-link health.
-- **Content:** required fields, IDs, duplicate detection, and taxonomy references.
-- **Translations:** locale parity, stale-source detection, and glossary consistency.
-- **Code:** language-specific syntax checks and reproducible example tests.
-- **Website:** build, accessibility, responsive layout, and search.
-- **Security:** dependency review, secret scanning, and content trust boundaries.
+Run locally:
 
-## Current automated check
+```
+python -m pip install -r requirements-dev.txt
+python scripts/validate_structure.py
+```
 
-`python scripts/validate_structure.py` checks the minimum foundation and parses the JSON Schema files using Python's standard library. It does not yet validate YAML, Markdown frontmatter, external links, translations, or executable examples.
+The validator currently checks:
+
+- YAML registry and knowledge-graph files parse successfully.
+- All six JSON Schemas are valid JSON Schema Draft 2020-12 documents.
+- Content frontmatter conforms to the relevant schemas.
+- Locale, domain, source, language-profile, and knowledge-graph references resolve.
+- English and Persian domain landing pages and required project files exist.
+- English and Persian content share stable IDs.
+- Relative Markdown links point to files inside this repository.
+- Both programming-language workbooks contain exactly 40 examples, consecutive numbering (01–40), a fenced code sample and file extension per entry, matching bilingual headings, and registry coverage.
+
+## Not yet automated
+
+- External HTTP link availability and source freshness.
+- Execution or compilation of all language examples against pinned toolchain versions.
+- Human review of translation accuracy and technical meaning.
+- Full anchor-level Markdown link validation.
+- Website build, accessibility, responsive layout, and search tests.
+- Dependency, secret, and security scanning.
+
+A passing structural check does not mean every code sample has been executed, every factual claim is verified, or every translation is publication-ready. Those states require separate evidence and review.
