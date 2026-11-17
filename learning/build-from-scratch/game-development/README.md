@@ -1,3 +1,28 @@
+---
+id: build-from-scratch.game-development
+title: "Build a 2D Game"
+content_type: project
+locale: en
+domain: web-and-app-development
+level: beginner
+status: draft
+learning_objectives:
+  - "Explain the stages of a game loop."
+  - "Implement frame-rate-independent movement."
+  - "Model rectangle collisions and game states."
+  - "Build a game that can start, finish, and restart."
+prerequisites:
+  - "Variables, conditions, loops, and functions"
+  - "Basic two-dimensional coordinates"
+milestones:
+  - "Draw the player in a window."
+  - "Add keyboard movement."
+  - "Use elapsed time for movement."
+  - "Add a collectible and collision."
+  - "Add score, restart, and finish state."
+  - "Document asset licences."
+---
+
 # Build a 2D Game
 
 **Level:** Beginner–Intermediate · **Languages:** Python, JavaScript, or C++ · **Track:** `game`
