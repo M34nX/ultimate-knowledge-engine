@@ -1,3 +1,29 @@
+---
+id: build-from-scratch.search-engine
+title: "Build a Small Search Engine"
+content_type: project
+locale: en
+domain: computer-science
+level: intermediate
+status: draft
+learning_objectives:
+  - "Normalize documents and tokenize text while retaining source paths."
+  - "Build an inverted index for terms, documents, and positions."
+  - "Process queries and rank results with a documented score."
+  - "Evaluate relevance using a small query set."
+  - "Respect document permissions and keep indexing local."
+prerequisites:
+  - "Strings, maps, and sets"
+  - "Sorting"
+  - "Basic probability"
+milestones:
+  - "Index a folder of public sample text."
+  - "Implement exact-term search."
+  - "Rank documents using a documented score."
+  - "Show snippets and source paths."
+  - "Evaluate results with a documented query set."
+---
+
 # Build a Small Search Engine
 
 **Level:** Intermediate · **Language:** Python · **Status:** Draft
