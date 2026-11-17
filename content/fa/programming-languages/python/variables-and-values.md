@@ -15,7 +15,7 @@ concepts:
   - python.variables
   - python.assignment
 sources:
-  - python-tutorial
+  - python-docs
 estimated_minutes: 20
 version_scope:
   minimum: "3"
