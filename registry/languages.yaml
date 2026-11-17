@@ -39,6 +39,7 @@ entries:
   - { id: delphi, name: Object Pascal / Delphi, kind: programming_language, group: desktop-and-legacy, status: planned }
   - { id: vbnet, name: Visual Basic .NET, kind: programming_language, group: enterprise-and-legacy, status: planned }
   - { id: groovy, name: Groovy, kind: programming_language, group: jvm, status: planned }
+  - { id: objective_c, name: Objective-C, kind: programming_language, group: apple-platforms, status: planned }
   - { id: solidity, name: Solidity, kind: programming_language, group: blockchain, status: planned }
   - { id: move, name: Move, kind: programming_language, group: blockchain, status: planned }
   - { id: zig, name: Zig, kind: programming_language, group: systems, status: planned }
