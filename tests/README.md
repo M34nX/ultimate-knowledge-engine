@@ -14,13 +14,14 @@ python scripts/validate_structure.py
 The validator currently checks:
 
 - YAML registry and knowledge-graph files parse successfully.
-- All six JSON Schemas are valid JSON Schema Draft 2020-12 documents.
+- All seven JSON Schemas are valid JSON Schema Draft 2020-12 documents.
 - Content frontmatter conforms to the relevant schemas.
 - Locale, domain, source, language-profile, and knowledge-graph references resolve.
 - English and Persian domain landing pages and required project files exist.
-- English and Persian content share stable IDs.
+- English and Persian content share stable IDs, including structured metadata for all seven Build from Scratch project pairs.
 - Relative Markdown links point to files inside this repository.
 - Both programming-language workbooks contain exactly 40 examples, consecutive numbering (01–40), a fenced code sample and file extension per entry, matching bilingual headings, and registry coverage.
+- All seven Build from Scratch tracks have English/Persian project frontmatter validated against `schemas/project.schema.json`, including objectives, prerequisites, and milestones.
 
 ## Not yet automated
 
