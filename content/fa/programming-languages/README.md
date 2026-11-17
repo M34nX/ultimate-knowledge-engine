@@ -7,7 +7,7 @@
 - **[دورهٔ پایتون از صفر تا سطح میانی — ۱۷ درس](python/README.md)**: مبانی، کنترل جریان، ساختار داده، تابع، فایل، ماژول، محیط مجازی، شیءگرایی و آزمون‌نویسی.
 - [نقشهٔ راه پایتون](../../../learning/roadmaps/python-from-zero.fa.md)
 - [تمرین‌های پایتون](python/exercises/variables-and-input.md) — همراه با پاسخ و معیار ارزیابی.
-- [پروژهٔ پایانی مدیریت کتابخانه](../../projects-and-research/python-reading-tracker.md)
+- [پروژهٔ پایانی مدیریت کتابخانه](../projects-and-research/python-reading-tracker.md)
 
 ## فایل‌های آموزشی پایتون
 
