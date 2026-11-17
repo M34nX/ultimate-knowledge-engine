@@ -11,7 +11,6 @@
 </p>
 
 <p align="center">
-  <a href="content/fa/README.md">فارسی</a> ·
   <a href="START-HERE.md">Start here</a> ·
   <a href="learning/README.md">Learning academy</a> ·
   <a href="docs/roadmap.md">Roadmap</a> ·
@@ -43,11 +42,11 @@ The repository is canonical. A future website is intended to be generated from t
 
 ## 40 programming languages
 
-Learn with categorized examples across 40 programming languages, with English and Persian workbooks: [40-language workbook](learning/programming-languages/40-language-workbook.md) · [دفترچه فارسی](learning/programming-languages/40-language-workbook.fa.md).
+Learn with categorized examples across 40 programming languages, with reviewed, localized workbooks where available: [40-language workbook](learning/programming-languages/40-language-workbook.md).
 
 ## Build from Scratch Academy
 
-Learn by building small, understandable versions of real systems. The catalogue has direct lesson links, English and Persian drafts, and a clear separation between available and planned tracks.
+Learn by building small, understandable versions of real systems. The catalogue has direct lesson links, localized drafts where available, and a clear separation between available and planned tracks.
 
 | Category | Direct entry |
 |---|---|
@@ -59,7 +58,7 @@ Learn by building small, understandable versions of real systems. The catalogue 
 | Networking and servers | [Local network service](learning/build-from-scratch/network-server/README.md) |
 | Search and information retrieval | [Small search engine](learning/build-from-scratch/search-engine/README.md) |
 
-[Open the complete academy catalogue](learning/build-from-scratch/README.md) for Persian links, levels, learning steps, and planned categories.
+[Open the complete academy catalogue](learning/build-from-scratch/README.md) for levels, learning steps, and planned categories.
 
 ## Knowledge map
 
