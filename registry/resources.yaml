@@ -22,6 +22,7 @@ resources:
   - { id: linux-docs, title: Linux Kernel Documentation, url: https://docs.kernel.org/, type: official-documentation, topics: [linux, systems] }
   - { id: whatwg-html, title: WHATWG HTML Living Standard, url: https://html.spec.whatwg.org/, type: specification, topics: [html, web] }
   - { id: csswg-specs, title: CSS Specifications, url: https://www.w3.org/Style/CSS/, type: standards, topics: [css, web] }
+  - { id: mit-ocw-6-006, title: MIT OpenCourseWare — Introduction to Algorithms, url: https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-fall-2011/, type: official-course, topics: [algorithms, data-structures, computer-science] }
   - { id: owasp-cheatsheets, title: OWASP Cheat Sheet Series, url: https://cheatsheetseries.owasp.org/, type: security-reference, topics: [security, secure-development] }
 policy:
   default_reuse: link_only_until_licence_verified
