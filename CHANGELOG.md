@@ -4,6 +4,9 @@ All notable project changes are recorded here. The format follows Keep a Changel
 
 ## Unreleased — next release candidate
 
+- Add a dedicated project metadata schema and structured English/Persian frontmatter for all seven Build from Scratch tracks.
+- Extend the structural validator to check project objectives, prerequisites, milestones, locale/domain references, and stable translation IDs.
+
 - Correct the bilingual 40-language workbook numbering and remove the unrepresented GLSL entry from its starter-example categories.
 - Add explicit source-file extensions and CI checks for workbook count, numbering, fenced samples, bilingual parity, and registry coverage.
 - Add Objective-C to the language registry and update test/maintenance documentation to match the current checks.
