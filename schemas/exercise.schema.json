@@ -78,6 +78,13 @@
     "domain": {
       "type": "string",
       "minLength": 2
+    },
+    "sources": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string"
+      }
     }
   }
 }
