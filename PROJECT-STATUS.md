@@ -18,13 +18,15 @@ This page distinguishes published foundations from work in progress. A listed ca
 - Additional bilingual draft tracks for database engines, compilers, local network services, and search engines.
 - A direct-link academy catalogue with planned categories clearly separated from available draft lessons.
 - Bilingual 40-language starter workbooks with corrected 01–40 numbering, explicit source-file extensions, and registry-coverage checks.
-- An automated structural validator covering schemas, registries, metadata, graph references, relative Markdown links, and workbook consistency.
+- An automated structural validator covering schemas, registries, lesson and project metadata, graph references, relative Markdown links, and workbook consistency.
+- Structured English/Persian project metadata for all seven Build from Scratch tracks, validated against a dedicated project schema.
 
 ## In progress for v0.2.0
 
 - Expand and review the Build from Scratch curriculum.
 - Improve README navigation and repository presentation.
 - Extend automated checks to external-link health, deeper translation parity, executable code examples, and pinned toolchains.
+- Expand the project schema and metadata validation as the academy adds more project tracks.
 - Verify all new external references and technical examples.
 - Establish release notes and a repeatable release checklist.
 
