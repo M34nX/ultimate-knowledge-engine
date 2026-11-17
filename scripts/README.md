@@ -4,7 +4,7 @@ Scripts in this directory support repeatable repository maintenance.
 
 ## Available
 
-- `validate_structure.py` — validates registries, JSON Schemas, content frontmatter, language profiles, knowledge-graph references, required files, relative Markdown links, and the bilingual 40-language workbook contract.
+- `validate_structure.py` — validates registries, JSON Schemas, content frontmatter (including Build from Scratch project metadata), language profiles, knowledge-graph references, required files, relative Markdown links, and the bilingual 40-language workbook contract, and all seven bilingual Build from Scratch project metadata pairs.
 
 Run locally:
 
