@@ -1,3 +1,30 @@
+---
+id: build-from-scratch.compiler
+title: "Build a Small Programming Language"
+content_type: project
+locale: en
+domain: programming-languages
+level: advanced
+status: draft
+learning_objectives:
+  - "Define a small grammar and precedence rules."
+  - "Tokenize source text with source positions."
+  - "Build and evaluate an abstract syntax tree."
+  - "Add variables and useful diagnostics."
+  - "Explain why host-language eval is unsafe for learner input."
+prerequisites:
+  - "Functions and recursion"
+  - "Strings and tree data structures"
+  - "Basic discrete mathematics"
+milestones:
+  - "Implement an arithmetic tokenizer."
+  - "Parse precedence and parentheses."
+  - "Evaluate an abstract syntax tree."
+  - "Add variables and assignment."
+  - "Add diagnostics and automated tests."
+  - "Optionally implement a bytecode virtual machine."
+---
+
 # Build a Small Programming Language
 
 **Level:** Intermediate–Advanced · **Language:** Python or TypeScript · **Status:** Draft
