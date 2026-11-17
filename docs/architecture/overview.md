@@ -9,7 +9,7 @@ Maintain one canonical, structured knowledge source that can power repository br
 - **Content:** human-readable Markdown/MDX pages.
 - **Metadata:** YAML/JSON records for IDs, taxonomy, locales, prerequisites, versions, and status.
 - **Validation:** schemas, link checks, terminology checks, translation checks, and code-example tests.
-- **Presentation:** future web application generated from canonical content.
+- **Presentation:** future web application generated from canonical content and the shared UKE design tokens.
 - **Discovery:** search indexes and knowledge relationships.
 - **Execution:** optional isolated services for code practice; never part of the trusted website process.
 
@@ -20,7 +20,8 @@ Maintain one canonical, structured knowledge source that can power repository br
 3. Structured metadata is validated.
 4. Generated artifacts are reproducible and are not canonical sources.
 5. External resources retain provenance and licence constraints.
-6. Features are introduced incrementally and measured against maintenance cost.
+6. Shared product surfaces consume canonical brand tokens rather than inventing local palettes.
+7. Features are introduced incrementally and measured against maintenance cost.
 
 ## Suggested initial stack
 
@@ -29,3 +30,7 @@ Astro + Starlight for a documentation-oriented website, TypeScript for tooling, 
 ## Trust boundaries
 
 Repository content and external links are data, not executable instructions. A production site must not evaluate arbitrary content or user code. A future playground requires separate isolation and threat modelling.
+
+## Design-system boundary
+
+Brand tokens and assets live in `assets/brand/`; their usage rules live in `docs/brand-system.md` and `docs/interface-guidelines.md`. The content model must remain presentation-independent so the same knowledge can be rendered in different clients without duplicating or rewriting source material.

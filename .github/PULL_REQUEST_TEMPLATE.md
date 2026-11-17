@@ -9,10 +9,11 @@ Describe the change and the learner or maintainer problem it addresses.
 - [ ] Translation
 - [ ] Registry or schema change
 - [ ] Tooling or automation
-- [ ] Website
+- [ ] Website or application
+- [ ] Brand system or shared UI
 - [ ] Documentation / governance
 
-## Quality checklist
+## Knowledge quality
 
 - [ ] I searched for existing content and stable IDs.
 - [ ] I added or updated authoritative sources.
@@ -23,6 +24,14 @@ Describe the change and the learner or maintainer problem it addresses.
 - [ ] I checked links and local paths.
 - [ ] I did not copy third-party material without verified reuse permission.
 - [ ] I have not claimed review or verification that has not occurred.
+
+## Brand and accessibility (when applicable)
+
+- [ ] I used canonical UKE tokens and assets rather than introducing a competing palette.
+- [ ] I checked dark and light themes.
+- [ ] I considered Persian RTL and English LTR.
+- [ ] I checked keyboard focus, contrast, and reduced motion.
+- [ ] I did not claim a planned feature is already implemented.
 
 ## Additional context
 

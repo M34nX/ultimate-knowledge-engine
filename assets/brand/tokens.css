@@ -1,0 +1,55 @@
+/* UKE Cyber Blue — canonical design tokens.
+   Import these tokens in future web/mobile surfaces; keep content independent of UI. */
+:root {
+  color-scheme: dark;
+  --uke-ink-950: #071426;
+  --uke-ink-900: #0B1F36;
+  --uke-ink-800: #12304F;
+  --uke-blue-600: #1677FF;
+  --uke-blue-500: #368BFF;
+  --uke-cyan-400: #35D6F2;
+  --uke-ice-100: #EAF4FF;
+  --uke-slate-500: #71839A;
+  --uke-bg: var(--uke-ink-950);
+  --uke-surface: var(--uke-ink-900);
+  --uke-surface-raised: var(--uke-ink-800);
+  --uke-primary: var(--uke-blue-600);
+  --uke-primary-hover: var(--uke-blue-500);
+  --uke-accent: var(--uke-cyan-400);
+  --uke-text: var(--uke-ice-100);
+  --uke-text-muted: #9AAEC4;
+  --uke-border: #24415F;
+  --uke-success: #20A878;
+  --uke-warning: #E7A23B;
+  --uke-danger: #D94B59;
+  --uke-info: #35BFD8;
+  --uke-radius-card: 16px;
+  --uke-radius-control: 11px;
+  --uke-space-unit: 4px;
+  --uke-content-width: 76rem;
+  --uke-focus-ring: 0 0 0 3px rgb(53 214 242 / 35%);
+}
+:root[data-theme="light"] {
+  color-scheme: light;
+  --uke-bg: #F4F8FC;
+  --uke-surface: #FFFFFF;
+  --uke-surface-raised: #EAF4FF;
+  --uke-primary: #1268E8;
+  --uke-primary-hover: #075ACB;
+  --uke-accent: #087F9A;
+  --uke-text: #102033;
+  --uke-text-muted: #52677F;
+  --uke-border: #D9E4F0;
+}
+:where(button,a,input,select,textarea,[tabindex]):focus-visible {
+  outline: none;
+  box-shadow: var(--uke-focus-ring);
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+  }
+}
