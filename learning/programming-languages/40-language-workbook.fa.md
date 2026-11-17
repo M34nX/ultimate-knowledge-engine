@@ -1,6 +1,6 @@
 # دفترچه آموزشی ۴۰ زبان برنامه‌نویسی
 
-این دفترچه **۴۰ زبان برنامه‌نویسی** را با یک نمونه کوچک و قابل مقایسه معرفی می‌کند. این مجموعه نقطه شروع است، نه ۴۰ دوره کامل. زبان‌های shader و قرارداد هوشمند مدل اجرای متفاوتی دارند.
+این دفترچه **۴۰ زبان برنامه‌نویسی** را با یک نمونه کوچک و قابل مقایسه معرفی می‌کند. این مجموعه نقطه شروع است، نه ۴۰ دوره کامل. زبان‌های قرارداد هوشمند مدل اجرای متفاوتی دارند.
 
 ## دسته‌بندی بر اساس کاربرد
 
@@ -10,7 +10,7 @@
 - **Functional and concurrent:** Haskell, Scala, Elixir, Erlang, Clojure, OCaml, F#
 - **Scientific and data:** R, Julia, MATLAB, Fortran
 - **Enterprise and legacy:** COBOL, Ada, Pascal, Groovy, Objective-C
-- **Games, graphics and GPU:** GDScript, C++, GLSL
+- **Games, graphics and GPU:** GDScript, C++
 - **Smart contracts:** Solidity, Move, Vyper
 - **Automation:** Bash, PowerShell
 
@@ -27,7 +27,7 @@
 ### 01. Python
 
 **Main use:** general-purpose  
-**File:** `python`
+**File extension:** `.py`
 
 ```python
 print("Hello, world!")
@@ -36,7 +36,7 @@ print("Hello, world!")
 ### 02. JavaScript
 
 **Main use:** web and scripting  
-**File:** `javascript`
+**File extension:** `.js`
 
 ```javascript
 console.log("Hello, world!");
@@ -45,7 +45,7 @@ console.log("Hello, world!");
 ### 03. TypeScript
 
 **Main use:** web and application  
-**File:** `typescript`
+**File extension:** `.ts`
 
 ```typescript
 console.log("Hello, world!");
@@ -54,7 +54,7 @@ console.log("Hello, world!");
 ### 04. Java
 
 **Main use:** enterprise and backend  
-**File:** `java`
+**File extension:** `.java`
 
 ```java
 public class Main {
@@ -67,7 +67,7 @@ public class Main {
 ### 05. C
 
 **Main use:** systems  
-**File:** `c`
+**File extension:** `.c`
 
 ```c
 #include <stdio.h>
@@ -80,7 +80,7 @@ int main(void) {
 ### 06. C++
 
 **Main use:** systems and game development  
-**File:** `cpp`
+**File extension:** `.cpp`
 
 ```cpp
 #include <iostream>
@@ -92,7 +92,7 @@ int main() {
 ### 07. C#
 
 **Main use:** enterprise and applications  
-**File:** `csharp`
+**File extension:** `.cs`
 
 ```csharp
 using System;
@@ -104,7 +104,7 @@ class Program {
 ### 08. Go
 
 **Main use:** backend and cloud  
-**File:** `go`
+**File extension:** `.go`
 
 ```go
 package main
@@ -117,7 +117,7 @@ func main() {
 ### 09. Rust
 
 **Main use:** systems  
-**File:** `rust`
+**File extension:** `.rs`
 
 ```rust
 fn main() {
@@ -128,7 +128,7 @@ fn main() {
 ### 10. PHP
 
 **Main use:** web backend  
-**File:** `php`
+**File extension:** `.php`
 
 ```php
 <?php
@@ -138,7 +138,7 @@ echo "Hello, world!\n";
 ### 11. Ruby
 
 **Main use:** web and scripting  
-**File:** `ruby`
+**File extension:** `.rb`
 
 ```ruby
 puts "Hello, world!"
@@ -147,7 +147,7 @@ puts "Hello, world!"
 ### 12. Swift
 
 **Main use:** Apple platforms  
-**File:** `swift`
+**File extension:** `.swift`
 
 ```swift
 print("Hello, world!")
@@ -156,7 +156,7 @@ print("Hello, world!")
 ### 13. Kotlin
 
 **Main use:** Android and backend  
-**File:** `kotlin`
+**File extension:** `.kt`
 
 ```kotlin
 fun main() {
@@ -167,7 +167,7 @@ fun main() {
 ### 14. Dart
 
 **Main use:** cross-platform apps  
-**File:** `dart`
+**File extension:** `.dart`
 
 ```dart
 void main() {
@@ -178,7 +178,7 @@ void main() {
 ### 15. R
 
 **Main use:** statistics and data science  
-**File:** `r`
+**File extension:** `.R`
 
 ```r
 cat("Hello, world!\n")
@@ -187,7 +187,7 @@ cat("Hello, world!\n")
 ### 16. Julia
 
 **Main use:** scientific computing  
-**File:** `julia`
+**File extension:** `.jl`
 
 ```julia
 println("Hello, world!")
@@ -196,7 +196,7 @@ println("Hello, world!")
 ### 17. MATLAB
 
 **Main use:** numerical computing  
-**File:** `matlab`
+**File extension:** `.m`
 
 ```matlab
 disp('Hello, world!')
@@ -205,7 +205,7 @@ disp('Hello, world!')
 ### 18. Scala
 
 **Main use:** JVM and data engineering  
-**File:** `scala`
+**File extension:** `.scala`
 
 ```scala
 object Main extends App {
@@ -216,7 +216,7 @@ object Main extends App {
 ### 19. Haskell
 
 **Main use:** functional programming  
-**File:** `haskell`
+**File extension:** `.hs`
 
 ```haskell
 main :: IO ()
@@ -226,7 +226,7 @@ main = putStrLn "Hello, world!"
 ### 20. Elixir
 
 **Main use:** concurrent and distributed systems  
-**File:** `elixir`
+**File extension:** `.ex`
 
 ```elixir
 IO.puts("Hello, world!")
@@ -235,7 +235,7 @@ IO.puts("Hello, world!")
 ### 21. Erlang
 
 **Main use:** concurrent and distributed systems  
-**File:** `erlang`
+**File extension:** `.erl`
 
 ```erlang
 -module(hello).
@@ -246,7 +246,7 @@ main() -> io:format("Hello, world!~n").
 ### 22. Clojure
 
 **Main use:** functional programming  
-**File:** `clojure`
+**File extension:** `.clj`
 
 ```clojure
 (println "Hello, world!")
@@ -255,7 +255,7 @@ main() -> io:format("Hello, world!~n").
 ### 23. OCaml
 
 **Main use:** functional programming  
-**File:** `ocaml`
+**File extension:** `.ml`
 
 ```ocaml
 let () = print_endline "Hello, world!"
@@ -264,7 +264,7 @@ let () = print_endline "Hello, world!"
 ### 24. F#
 
 **Main use:** functional and .NET  
-**File:** `fsharp`
+**File extension:** `.fsx`
 
 ```fsharp
 printfn "Hello, world!"
@@ -273,7 +273,7 @@ printfn "Hello, world!"
 ### 25. Lua
 
 **Main use:** embedded scripting and games  
-**File:** `lua`
+**File extension:** `.lua`
 
 ```lua
 print("Hello, world!")
@@ -282,7 +282,7 @@ print("Hello, world!")
 ### 26. Perl
 
 **Main use:** text processing and scripting  
-**File:** `perl`
+**File extension:** `.pl`
 
 ```perl
 print "Hello, world!\n";
@@ -291,7 +291,7 @@ print "Hello, world!\n";
 ### 27. Bash
 
 **Main use:** shell scripting  
-**File:** `bash`
+**File extension:** `.sh`
 
 ```bash
 #!/usr/bin/env bash
@@ -301,7 +301,7 @@ printf '%s\n' 'Hello, world!'
 ### 28. PowerShell
 
 **Main use:** automation and administration  
-**File:** `powershell`
+**File extension:** `.ps1`
 
 ```powershell
 Write-Output 'Hello, world!'
@@ -310,7 +310,7 @@ Write-Output 'Hello, world!'
 ### 29. Fortran
 
 **Main use:** scientific computing  
-**File:** `fortran`
+**File extension:** `.f90`
 
 ```fortran
 program hello
@@ -321,7 +321,7 @@ end program hello
 ### 30. COBOL
 
 **Main use:** business and legacy systems  
-**File:** `cobol`
+**File extension:** `.cob`
 
 ```cobol
        IDENTIFICATION DIVISION.
@@ -334,7 +334,7 @@ end program hello
 ### 31. Ada
 
 **Main use:** reliable and safety-critical systems  
-**File:** `ada`
+**File extension:** `.adb`
 
 ```ada
 with Ada.Text_IO;
@@ -347,7 +347,7 @@ end Hello;
 ### 32. Pascal
 
 **Main use:** education and general-purpose  
-**File:** `pascal`
+**File extension:** `.pas`
 
 ```pascal
 program Hello;
@@ -359,7 +359,7 @@ end.
 ### 33. Groovy
 
 **Main use:** JVM scripting  
-**File:** `groovy`
+**File extension:** `.groovy`
 
 ```groovy
 println 'Hello, world!'
@@ -368,7 +368,7 @@ println 'Hello, world!'
 ### 34. Solidity
 
 **Main use:** smart contracts  
-**File:** `solidity`
+**File extension:** `.sol`
 
 ```solidity
 // SPDX-License-Identifier: MIT
@@ -383,7 +383,7 @@ contract Hello {
 ### 35. Move
 
 **Main use:** resource-oriented smart contracts  
-**File:** `move`
+**File extension:** `.move`
 
 ```move
 module example::hello {
@@ -396,7 +396,7 @@ module example::hello {
 ### 36. Zig
 
 **Main use:** systems programming  
-**File:** `zig`
+**File extension:** `.zig`
 
 ```zig
 const std = @import("std");
@@ -408,7 +408,7 @@ pub fn main() void {
 ### 37. GDScript
 
 **Main use:** game development  
-**File:** `gdscript`
+**File extension:** `.gd`
 
 ```gdscript
 extends SceneTree
@@ -418,10 +418,10 @@ func _initialize() -> void:
     quit()
 ```
 
-### 39. Vyper
+### 38. Vyper
 
 **Main use:** smart contracts  
-**File:** `vyper`
+**File extension:** `.vy`
 
 ```vyper
 @external
@@ -430,10 +430,10 @@ def message() -> String[13]:
     return "Hello, world!"
 ```
 
-### 40. Objective-C
+### 39. Objective-C
 
 **Main use:** Apple platforms  
-**File:** `objective-c`
+**File extension:** `.m`
 
 ```objective-c
 #import <Foundation/Foundation.h>
@@ -445,10 +445,10 @@ int main(void) {
 }
 ```
 
-### 41. Assembly (x86-64 NASM)
+### 40. Assembly (x86-64 NASM)
 
 **Main use:** low-level systems  
-**File:** `asm`
+**File extension:** `.asm`
 
 ```asm
 section .data
@@ -472,7 +472,7 @@ _start:
 
 - این نمونه‌ها مقدماتی‌اند و دوره کامل یا کد آماده تولید نیستند.
 - همه نمونه‌ها هنوز در ابزارهای رسمی خود اجرا نشده‌اند؛ وضعیت آن‌ها **پیش‌نویس / تأییدنشده** است.
-- GLSL زبان shader، زبان‌های Solidity و Move و Vyper زبان قرارداد هوشمند و Assembly وابسته به معماری پردازنده است.
+- زبان‌های Solidity و Move و Vyper برای قرارداد هوشمند هستند و Assembly به معماری پردازنده وابسته است.
 - نمونه Assembly برای Linux x86-64 با دستور زبان NASM نوشته شده است.
 - قراردادهای هوشمند را فقط در محیط محلی و شبکه آزمایشی بررسی کنید؛ برای تمرین مقدماتی از دارایی واقعی استفاده نکنید.
 - راهنماهای کامل آینده باید نسخه زبان و ابزارها را مشخص و به مستندات رسمی ارجاع دهند.
