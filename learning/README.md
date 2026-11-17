@@ -13,6 +13,13 @@ The learning layer turns reference knowledge into sequenced learning experiences
 - **Projects:** applied work with requirements, milestones, and acceptance criteria.
 - **Assessments:** structured evidence of mastery.
 
+## Programming languages
+
+- [40-language workbook — English](programming-languages/40-language-workbook.md)
+- [دفترچه ۴۰ زبان — فارسی](programming-languages/40-language-workbook.fa.md)
+
+The workbook contains introductory code samples, not 40 complete courses. Samples remain Draft until tested against documented toolchain versions.
+
 ## Learning levels
 
 - **Beginner:** first principles, vocabulary, guided examples.
