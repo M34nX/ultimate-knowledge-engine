@@ -15,8 +15,8 @@ import yaml
 from jsonschema import Draft202012Validator, FormatChecker
 
 ROOT = Path(__file__).resolve().parents[1]
-SCHEMA_NAMES = ("concept", "lesson", "exercise", "reference", "language", "roadmap")
-CONTENT_SCHEMAS = {"concept": "concept", "lesson": "lesson", "exercise": "exercise"}
+SCHEMA_NAMES = ("concept", "lesson", "exercise", "reference", "language", "roadmap", "project")
+CONTENT_SCHEMAS = {"concept": "concept", "lesson": "lesson", "exercise": "exercise", "project": "project"}
 FRONTMATTER = re.compile(r"\A---\s*\n(.*?)\n---\s*(?:\n|\Z)", re.DOTALL)
 MARKDOWN_LINK = re.compile(r"(?<!!)\[[^\]]*\]\(([^)\s]+)(?:\s+[^)]*)?\)")
 
@@ -58,52 +58,60 @@ def validate_content(
     ids_by_locale: dict[str, set[str]] = defaultdict(set)
     seen: set[tuple[str, str]] = set()
 
-    for path in sorted((ROOT / "content").rglob("*.md")):
-        text = path.read_text(encoding="utf-8")
-        match = FRONTMATTER.match(text)
-        if not match:
-            continue
+    content_roots = (ROOT / "content", ROOT / "learning" / "build-from-scratch")
+    for content_root in content_roots:
+        for path in sorted(content_root.rglob("*.md")):
+            text = path.read_text(encoding="utf-8")
+            match = FRONTMATTER.match(text)
+            if not match:
+                try:
+                    track_relative = path.relative_to(ROOT / "learning" / "build-from-scratch")
+                except ValueError:
+                    track_relative = None
+                if track_relative is not None and len(track_relative.parts) == 2 and path.name in ("README.md", "README.fa.md"):
+                    add_error(f"Missing project metadata in {path.relative_to(ROOT)}")
+                continue
 
-        try:
-            metadata = yaml.safe_load(match.group(1))
-        except yaml.YAMLError as exc:
-            add_error(f"Invalid frontmatter in {path.relative_to(ROOT)}: {exc}")
-            continue
-
-        if not isinstance(metadata, dict):
-            add_error(f"Frontmatter must be a mapping: {path.relative_to(ROOT)}")
-            continue
-
-        schema_name = CONTENT_SCHEMAS.get(metadata.get("content_type"))
-        if schema_name is None:
-            add_error(f"Unknown content_type in {path.relative_to(ROOT)}")
-            continue
-
-        validator = validators.get(schema_name)
-        if validator is not None:
-            for issue in validator.iter_errors(metadata):
-                location = ".".join(str(part) for part in issue.path)
-                add_error(f"{path.relative_to(ROOT)} [{location}]: {issue.message}")
-
-        content_id = metadata.get("id")
-        locale = metadata.get("locale")
-        domain = metadata.get("domain")
-        if isinstance(content_id, str) and isinstance(locale, str):
-            key = (content_id, locale)
-            if key in seen:
-                add_error(f"Duplicate content ID/locale pair: {content_id} ({locale})")
-            seen.add(key)
-            ids_by_locale[locale].add(content_id)
-
-        if locale not in valid_locales:
-            add_error(f"Unknown locale in {path.relative_to(ROOT)}: {locale}")
-        if domain not in valid_domains:
-            add_error(f"Unknown domain in {path.relative_to(ROOT)}: {domain}")
-
-        for source_id in metadata.get("sources", []):
-            if source_id not in valid_sources:
-                add_error(f"Unknown source ID '{source_id}' in {path.relative_to(ROOT)}")
-
+            try:
+                metadata = yaml.safe_load(match.group(1))
+            except yaml.YAMLError as exc:
+                add_error(f"Invalid frontmatter in {path.relative_to(ROOT)}: {exc}")
+                continue
+    
+            if not isinstance(metadata, dict):
+                add_error(f"Frontmatter must be a mapping: {path.relative_to(ROOT)}")
+                continue
+    
+            schema_name = CONTENT_SCHEMAS.get(metadata.get("content_type"))
+            if schema_name is None:
+                add_error(f"Unknown content_type in {path.relative_to(ROOT)}")
+                continue
+    
+            validator = validators.get(schema_name)
+            if validator is not None:
+                for issue in validator.iter_errors(metadata):
+                    location = ".".join(str(part) for part in issue.path)
+                    add_error(f"{path.relative_to(ROOT)} [{location}]: {issue.message}")
+    
+            content_id = metadata.get("id")
+            locale = metadata.get("locale")
+            domain = metadata.get("domain")
+            if isinstance(content_id, str) and isinstance(locale, str):
+                key = (content_id, locale)
+                if key in seen:
+                    add_error(f"Duplicate content ID/locale pair: {content_id} ({locale})")
+                seen.add(key)
+                ids_by_locale[locale].add(content_id)
+    
+            if locale not in valid_locales:
+                add_error(f"Unknown locale in {path.relative_to(ROOT)}: {locale}")
+            if domain not in valid_domains:
+                add_error(f"Unknown domain in {path.relative_to(ROOT)}: {domain}")
+    
+            for source_id in metadata.get("sources", []):
+                if source_id not in valid_sources:
+                    add_error(f"Unknown source ID '{source_id}' in {path.relative_to(ROOT)}")
+    
     return ids_by_locale
 
 
