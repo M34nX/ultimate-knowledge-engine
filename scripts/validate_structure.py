@@ -146,6 +146,17 @@ def validate_internal_links() -> int:
 
 
 
+BUILD_FROM_SCRATCH_TRACKS = (
+    "ai-model",
+    "game-development",
+    "operating-systems",
+    "database-engine",
+    "compiler",
+    "network-server",
+    "search-engine",
+)
+
+
 WORKBOOK_PATHS = {
     "en": ROOT / "learning" / "programming-languages" / "40-language-workbook.md",
     "fa": ROOT / "learning" / "programming-languages" / "40-language-workbook.fa.md",
@@ -270,6 +281,24 @@ def main() -> int:
             add_error(f"Missing required file: {relative}")
 
     ids_by_locale = validate_content(validators, locale_tags, domain_slugs, source_ids)
+    build_from_scratch_ids = {
+        locale: {
+            item for item in ids_by_locale.get(locale, set())
+            if item.startswith("build-from-scratch.")
+        }
+        for locale in ("en", "fa")
+    }
+    if build_from_scratch_ids["en"] != build_from_scratch_ids["fa"]:
+        missing_fa = sorted(build_from_scratch_ids["en"] - build_from_scratch_ids["fa"])
+        missing_en = sorted(build_from_scratch_ids["fa"] - build_from_scratch_ids["en"])
+        add_error(f"Build from Scratch translation ID mismatch; missing in fa: {missing_fa}; missing in en: {missing_en}.")
+
+    for track in BUILD_FROM_SCRATCH_TRACKS:
+        for locale, filename in (("en", "README.md"), ("fa", "README.fa.md")):
+            track_page = ROOT / "learning" / "build-from-scratch" / track / filename
+            if not track_page.is_file():
+                add_error(f"Missing {locale} Build from Scratch track page: {track}/{filename}")
+
     shared = ids_by_locale.get("en", set()) & ids_by_locale.get("fa", set())
     if not shared:
         add_error("No shared stable content IDs found between en and fa.")
