@@ -1,3 +1,28 @@
+---
+id: build-from-scratch.ai-model
+title: "Build a Tiny AI Model"
+content_type: project
+locale: en
+domain: ai-and-data-science
+level: intermediate
+status: draft
+learning_objectives:
+  - "Explain features, labels, and supervised learning."
+  - "Create reproducible training, validation, and test splits."
+  - "Compare classification metrics and their limitations."
+  - "Document dataset provenance and model limitations."
+prerequisites:
+  - "Python functions and collections"
+  - "Basic algebra"
+  - "Familiarity with tables and graphs"
+milestones:
+  - "Inspect a public teaching dataset."
+  - "Create reproducible data splits."
+  - "Train a baseline and record metrics."
+  - "Compare one changed feature or hyperparameter."
+  - "Write a model card."
+---
+
 # Build a Tiny AI Model
 
 **Level:** Intermediate · **Language:** Python · **Track:** `ai-model`
