@@ -1,8 +1,9 @@
 # Programming Languages — English
 
-Each language guide should have a profile, version scope, conceptual learning path, references, examples, exercises, and tests appropriate to that language.
+Explore language-specific guides and compare programming paradigms. The central [40-language workbook](../../../learning/programming-languages/40-language-workbook.md) contains categorized starter examples.
 
-Do not force every language into an identical chapter list. Rust needs ownership and borrowing; JavaScript needs its execution and event-loop model; C requires careful treatment of memory and undefined behaviour. Preserve language-specific depth.
+Each language guide should eventually include its version scope, profile, syntax, types, runtime, standard library, package ecosystem, examples, exercises, tests, security notes, and official references.
 
-Current starter content:
-- Python: [Functions — First Principles](python/functions.md), Draft.
+Current detailed starter content:
+- [Python: Functions — First Principles](python/functions.md) — Draft.
+- [40-language workbook](../../../learning/programming-languages/40-language-workbook.md) — 40 introductory examples; Draft / unverified.
