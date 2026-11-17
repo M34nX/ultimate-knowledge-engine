@@ -1,3 +1,29 @@
+---
+id: build-from-scratch.operating-systems
+title: "Understand Operating Systems with a Safe Simulator"
+content_type: project
+locale: en
+domain: systems-and-networking
+level: advanced
+status: draft
+learning_objectives:
+  - "Explain user mode and kernel mode."
+  - "Simulate process states and scheduling in user space."
+  - "Model virtual-page to physical-frame mappings."
+  - "Describe system calls and an in-memory file tree."
+  - "Explain why a simulator is not a production OS."
+prerequisites:
+  - "Data structures and debugging"
+  - "Binary and hexadecimal notation"
+  - "Basic computer architecture"
+milestones:
+  - "Draw user-mode and kernel-mode flow."
+  - "Represent process states in user space."
+  - "Simulate FCFS and round-robin."
+  - "Add a page-mapping table."
+  - "Model an in-memory file tree and its limits."
+---
+
 # Understand Operating Systems with a Safe Simulator
 
 **Level:** Intermediate–Advanced · **Languages:** Python for simulation; C or Rust for further study · **Track:** `operating-system`
