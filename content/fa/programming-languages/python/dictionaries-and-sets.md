@@ -17,7 +17,7 @@ concepts:
   - python.dictionaries
   - python.sets
 sources:
-  - python-tutorial
+  - python-docs
 estimated_minutes: 30
 version_scope:
   minimum: "3"
