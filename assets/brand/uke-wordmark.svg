@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 112" role="img" aria-labelledby="title desc">
+  <title id="title">UKE — Ultimate Knowledge Engine</title>
+  <desc id="desc">Cyber Blue connected-node symbol and UKE wordmark.</desc>
+  <g transform="translate(4 4)">
+    <path d="M52 4 96 29v50l-44 25L8 79V29L52 4Z" fill="#0B1F36" stroke="#24415F" stroke-width="3"/>
+    <path d="m29 35 23 19 25-22M29 35l-2 37 25-18 27 20M77 32l2 42M27 72l25 21 27-19" fill="none" stroke="#368BFF" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="29" cy="35" r="6" fill="#35D6F2"/><circle cx="77" cy="32" r="6" fill="#1677FF"/>
+    <circle cx="52" cy="54" r="8" fill="#EAF4FF" stroke="#1677FF" stroke-width="3"/>
+    <circle cx="27" cy="72" r="5" fill="#1677FF"/><circle cx="79" cy="74" r="5" fill="#35D6F2"/><circle cx="52" cy="93" r="5" fill="#368BFF"/>
+  </g>
+  <text x="124" y="62" fill="#EAF4FF" font-family="Inter,Arial,sans-serif" font-size="52" font-weight="800" letter-spacing="3">UKE</text>
+  <text x="126" y="88" fill="#9AAEC4" font-family="Inter,Arial,sans-serif" font-size="13" letter-spacing="1.2">ULTIMATE KNOWLEDGE ENGINE</text>
+</svg>

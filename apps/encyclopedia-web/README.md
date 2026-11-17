@@ -2,7 +2,11 @@
 
 ## Purpose
 
-A future multilingual website generated from the canonical repository content.
+A future multilingual website generated from the canonical repository content. The repository remains the source of truth; the site must not maintain a parallel hand-edited copy of lessons.
+
+## Product identity
+
+The future interface follows the [UKE Cyber Blue brand system](../../docs/brand-system.md), uses the shared [design tokens](../../assets/brand/tokens.css), and follows the [interface guidelines](../../docs/interface-guidelines.md).
 
 ## Initial implementation direction
 
@@ -15,10 +19,11 @@ A future multilingual website generated from the canonical repository content.
 
 1. Load validated content and stable IDs.
 2. Support locale-aware navigation and RTL/LTR layouts.
-3. Display source, version, and publication status.
-4. Provide keyboard-accessible search and navigation.
-5. Add responsive and accessibility testing.
-6. Add richer semantic search only after the basic index is dependable.
+3. Apply canonical design tokens with dark and light themes.
+4. Display source, version, and publication status.
+5. Provide keyboard-accessible search and navigation.
+6. Add responsive and accessibility testing.
+7. Add richer semantic search only after the basic index is dependable.
 
 ## Non-negotiable security boundary
 
