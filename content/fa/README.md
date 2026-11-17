@@ -5,6 +5,9 @@
 ## دوره‌های آموزشی پیوسته
 
 - [دورهٔ پایتون از صفر تا سطح میانی — ۱۷ درس](programming-languages/python/README.md)
+- [دورهٔ الگوریتم و ساختمان داده — ۶ درس](computer-science/algorithms/README.md)
+- [دورهٔ مبانی SQL و پایگاه داده — ۶ درس](databases/sql-fundamentals/README.md)
+- [دورهٔ مبانی توسعهٔ وب — ۵ درس](web-and-app-development/web-foundations/README.md)
 - [نقشهٔ راه پایتون](../../learning/roadmaps/python-from-zero.fa.md)
 - [نقشهٔ توسعهٔ آموزشی همهٔ ۱۲ حوزه](../../docs/curriculum-blueprint.fa.md)
 
