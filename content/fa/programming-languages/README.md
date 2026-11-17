@@ -5,5 +5,11 @@
 هر راهنمای کامل باید دامنه نسخه، معرفی، نحو، نوع‌ها، محیط اجرا، کتابخانه استاندارد، اکوسیستم بسته‌ها، مثال، تمرین، آزمون، نکات امنیتی و منابع رسمی داشته باشد.
 
 محتوای موجود:
+- [متغیرها و مقدارها در پایتون](python/variables-and-values.md) — پیش‌نویس.
+- [نوع‌های داده پایه در پایتون](python/basic-data-types.md) — پیش‌نویس.
+- [تصمیم‌گیری با شرط‌ها در پایتون](python/conditional-statements.md) — پیش‌نویس.
+- [حلقه‌های for و while در پایتون](python/for-and-while-loops.md) — پیش‌نویس.
+- [فهرست‌ها و تاپل‌ها در پایتون](python/lists-and-tuples.md) — پیش‌نویس.
+- [دیکشنری‌ها و مجموعه‌ها در پایتون](python/dictionaries-and-sets.md) — پیش‌نویس.
 - [آشنایی با توابع در Python](python/functions.md) — پیش‌نویس.
 - [دفترچه ۴۰ زبان](../../../learning/programming-languages/40-language-workbook.fa.md) — ۴۰ نمونه مقدماتی؛ پیش‌نویس و تأییدنشده.
