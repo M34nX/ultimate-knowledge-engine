@@ -4,6 +4,10 @@ All notable project changes are recorded here. The format follows Keep a Changel
 
 ## Unreleased — next release candidate
 
+- Correct the bilingual 40-language workbook numbering and remove the unrepresented GLSL entry from its starter-example categories.
+- Add explicit source-file extensions and CI checks for workbook count, numbering, fenced samples, bilingual parity, and registry coverage.
+- Add Objective-C to the language registry and update test/maintenance documentation to match the current checks.
+
 - Expand Build from Scratch Academy with bilingual database-engine, compiler, local-network-service, and search-engine curricula.
 - Replace the short academy index with a direct-link catalogue, learner levels, clear draft status, and planned-category roadmap.
 - Improve learning navigation and explain the distinction between delivered content and planned tracks.
