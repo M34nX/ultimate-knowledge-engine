@@ -1,0 +1,69 @@
+schema_version: 1
+description: >
+  Proposed coverage registry. An entry means the technology is in scope for research
+  or future documentation; it does not mean a complete guide has been published.
+entries:
+  - { id: python, name: Python, kind: programming_language, group: general-purpose, status: planned }
+  - { id: javascript, name: JavaScript, kind: programming_language, group: web, status: planned }
+  - { id: typescript, name: TypeScript, kind: programming_language, group: web, status: planned }
+  - { id: java, name: Java, kind: programming_language, group: enterprise, status: planned }
+  - { id: c, name: C, kind: programming_language, group: systems, status: planned }
+  - { id: cpp, name: C++, kind: programming_language, group: systems, status: planned }
+  - { id: csharp, name: C#, kind: programming_language, group: enterprise, status: planned }
+  - { id: go, name: Go, kind: programming_language, group: systems-and-backend, status: planned }
+  - { id: rust, name: Rust, kind: programming_language, group: systems, status: planned }
+  - { id: php, name: PHP, kind: programming_language, group: web, status: planned }
+  - { id: ruby, name: Ruby, kind: programming_language, group: web, status: planned }
+  - { id: swift, name: Swift, kind: programming_language, group: mobile, status: planned }
+  - { id: kotlin, name: Kotlin, kind: programming_language, group: mobile-and-enterprise, status: planned }
+  - { id: dart, name: Dart, kind: programming_language, group: mobile-and-web, status: planned }
+  - { id: r, name: R, kind: programming_language, group: data-science, status: planned }
+  - { id: julia, name: Julia, kind: programming_language, group: scientific-computing, status: planned }
+  - { id: matlab, name: MATLAB, kind: programming_language, group: scientific-computing, status: planned }
+  - { id: scala, name: Scala, kind: programming_language, group: functional-and-enterprise, status: planned }
+  - { id: haskell, name: Haskell, kind: programming_language, group: functional, status: planned }
+  - { id: elixir, name: Elixir, kind: programming_language, group: functional-and-concurrent, status: planned }
+  - { id: erlang, name: Erlang, kind: programming_language, group: functional-and-concurrent, status: planned }
+  - { id: clojure, name: Clojure, kind: programming_language, group: functional, status: planned }
+  - { id: ocaml, name: OCaml, kind: programming_language, group: functional, status: planned }
+  - { id: fsharp, name: F#, kind: programming_language, group: functional-and-enterprise, status: planned }
+  - { id: lua, name: Lua, kind: programming_language, group: scripting-and-embedded, status: planned }
+  - { id: perl, name: Perl, kind: programming_language, group: scripting-and-legacy, status: planned }
+  - { id: bash, name: Bash, kind: programming_language, group: shell-scripting, status: planned }
+  - { id: powershell, name: PowerShell, kind: programming_language, group: shell-scripting, status: planned }
+  - { id: assembly, name: Assembly, kind: programming_language_family, group: low-level, status: planned }
+  - { id: fortran, name: Fortran, kind: programming_language, group: scientific-and-legacy, status: planned }
+  - { id: cobol, name: COBOL, kind: programming_language, group: enterprise-and-legacy, status: planned }
+  - { id: ada, name: Ada, kind: programming_language, group: safety-critical, status: planned }
+  - { id: pascal, name: Pascal, kind: programming_language, group: education-and-legacy, status: planned }
+  - { id: delphi, name: Object Pascal / Delphi, kind: programming_language, group: desktop-and-legacy, status: planned }
+  - { id: vbnet, name: Visual Basic .NET, kind: programming_language, group: enterprise-and-legacy, status: planned }
+  - { id: groovy, name: Groovy, kind: programming_language, group: jvm, status: planned }
+  - { id: solidity, name: Solidity, kind: programming_language, group: blockchain, status: planned }
+  - { id: move, name: Move, kind: programming_language, group: blockchain, status: planned }
+  - { id: zig, name: Zig, kind: programming_language, group: systems, status: planned }
+  - { id: gdscript, name: GDScript, kind: programming_language, group: game-development, status: planned }
+  - { id: glsl, name: GLSL, kind: shader_language, group: graphics, status: planned }
+  - { id: wgsl, name: WGSL, kind: shader_language, group: graphics, status: planned }
+  - { id: verilog, name: Verilog, kind: hardware_description_language, group: digital-design, status: planned }
+  - { id: vhdl, name: VHDL, kind: hardware_description_language, group: digital-design, status: planned }
+  - { id: sql, name: SQL, kind: query_language, group: databases, status: planned }
+  - { id: graphql, name: GraphQL, kind: query_language, group: APIs, status: planned }
+  - { id: html, name: HTML, kind: markup_language, group: web-platform, status: planned }
+  - { id: css, name: CSS, kind: stylesheet_language, group: web-platform, status: planned }
+  - { id: xml, name: XML, kind: markup_language, group: data-formats, status: planned }
+  - { id: json, name: JSON, kind: data_format, group: data-formats, status: planned }
+  - { id: yaml, name: YAML, kind: data_serialization_language, group: configuration, status: planned }
+  - { id: toml, name: TOML, kind: configuration_format, group: configuration, status: planned }
+  - { id: hcl, name: HCL, kind: configuration_language, group: infrastructure, status: planned }
+  - { id: nix, name: Nix, kind: programming_and_configuration_language, group: systems, status: planned }
+  - { id: cmake, name: CMake Language, kind: build_configuration_language, group: tooling, status: planned }
+  - { id: make, name: Makefile Language, kind: build_language, group: tooling, status: planned }
+  - { id: wasm, name: WebAssembly, kind: portable_binary_instruction_format, group: runtime-platform, status: planned }
+  - { id: vyper, name: Vyper, kind: programming_language, group: blockchain, status: planned }
+  - { id: micro_python, name: MicroPython, kind: programming_language_implementation, group: embedded, status: planned }
+  - { id: racket, name: Racket, kind: programming_language, group: functional-and-education, status: planned }
+  - { id: scheme, name: Scheme, kind: programming_language, group: functional, status: planned }
+  - { id: common_lisp, name: Common Lisp, kind: programming_language, group: functional, status: planned }
+  - { id: crystal, name: Crystal, kind: programming_language, group: compiled-general-purpose, status: planned }
+  - { id: nim, name: Nim, kind: programming_language, group: compiled-general-purpose, status: planned }

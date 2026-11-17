@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/uke/schemas/concept.schema.json",
+  "title": "UKE Concept Metadata",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "title", "content_type", "locale", "domain", "level", "status"],
+  "properties": {
+    "id": { "type": "string", "pattern": "^[a-z0-9]+([.-][a-z0-9]+)*$" },
+    "title": { "type": "string", "minLength": 3 },
+    "content_type": { "const": "concept" },
+    "locale": { "type": "string", "minLength": 2 },
+    "domain": { "type": "string", "minLength": 2 },
+    "level": { "enum": ["beginner", "intermediate", "advanced", "specialist"] },
+    "status": { "enum": ["draft", "reviewed", "verified", "published", "outdated", "deprecated"] },
+    "tags": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+    "prerequisites": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+    "sources": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+    "translation_of": { "type": "string" },
+    "last_reviewed": { "type": "string", "format": "date" },
+    "version_scope": {
+      "type": "object",
+      "properties": {
+        "minimum": { "type": ["string", "null"] },
+        "maximum": { "type": ["string", "null"] },
+        "notes": { "type": "string" }
+      },
+      "additionalProperties": false
+    }
+  }
+}

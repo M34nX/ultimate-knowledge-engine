@@ -1,0 +1,37 @@
+id: python
+name: Python
+kind: programming_language
+status: planned
+paradigms:
+  - procedural
+  - object-oriented
+  - functional
+domains:
+  - general-purpose
+  - web
+  - automation
+  - data-science
+  - scientific-computing
+first_release: unknown
+current_stable_version: unknown
+version_reviewed_on: null
+typing_model: dynamic with optional type annotations
+execution_model: implementation-dependent; document CPython separately from other implementations
+memory_model: implementation-dependent; describe CPython reference counting and cyclic garbage collection with version scope
+official_homepage: https://www.python.org/
+official_documentation: https://docs.python.org/3/
+package_ecosystem: PyPI
+tooling:
+  - CPython
+  - pip
+  - venv
+  - pytest
+learning_path:
+  beginner:
+    - python.functions.basics
+  intermediate: []
+  advanced: []
+sources:
+  - python-docs
+editorial_notes: >
+  Proposed profile. Verify all implementation and version details before publication.

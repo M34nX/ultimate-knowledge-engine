@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/uke/schemas/reference.schema.json",
+  "title": "UKE External Reference Metadata",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "title", "url", "source_type", "reuse_status"],
+  "properties": {
+    "id": { "type": "string", "pattern": "^[a-z0-9]+([.-][a-z0-9]+)*$" },
+    "title": { "type": "string" },
+    "url": { "type": "string", "format": "uri" },
+    "publisher": { "type": "string" },
+    "source_type": { "enum": ["official-documentation", "specification", "primary-research", "textbook", "course", "community-reference", "security-reference", "other"] },
+    "version": { "type": "string" },
+    "published_date": { "type": "string", "format": "date" },
+    "accessed_date": { "type": "string", "format": "date" },
+    "licence": { "type": "string" },
+    "reuse_status": { "enum": ["link-only", "permission-verified", "public-domain", "unknown", "not-applicable"] },
+    "topics": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+    "notes": { "type": "string" }
+  }
+}

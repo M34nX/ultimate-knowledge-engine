@@ -1,0 +1,32 @@
+name: Bug report
+description: Report a documentation, content, tooling, or website issue.
+title: "[Bug] "
+labels: ["bug", "triage"]
+body:
+  - type: input
+    id: location
+    attributes:
+      label: Affected file or page
+      placeholder: "Path or URL"
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What is incorrect or broken?
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect instead?
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Relevant language, tool, or content version
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Sources or reproduction steps

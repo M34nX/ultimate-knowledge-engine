@@ -1,0 +1,45 @@
+name: Content proposal
+description: Propose a new lesson, concept, language guide, or learning resource.
+title: "[Content] "
+labels: ["content", "triage"]
+body:
+  - type: dropdown
+    id: content_type
+    attributes:
+      label: Content type
+      options:
+        - Concept
+        - Lesson
+        - Language guide
+        - Exercise
+        - Roadmap
+        - Reference
+        - Translation
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: topic
+    attributes:
+      label: Proposed topic
+      placeholder: "e.g. Python exception handling"
+    validations:
+      required: true
+  - type: textarea
+    id: learner_value
+    attributes:
+      label: Learner need and expected outcome
+      description: What should a learner understand or be able to do?
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: Authoritative sources
+      description: Provide official documentation, specifications, or primary research where possible.
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Additional notes

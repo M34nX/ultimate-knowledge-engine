@@ -1,0 +1,28 @@
+schema_version: 1
+description: >
+  Curated starting points. These records are links, not permission to reproduce source material.
+resources:
+  - { id: python-docs, title: Python Documentation, url: https://docs.python.org/3/, type: official-documentation, topics: [python] }
+  - { id: mdn-web-docs, title: MDN Web Docs, url: https://developer.mozilla.org/, type: reference-documentation, topics: [javascript, html, css, web] }
+  - { id: typescript-handbook, title: TypeScript Handbook, url: https://www.typescriptlang.org/docs/handbook/intro.html, type: official-documentation, topics: [typescript] }
+  - { id: java-docs, title: Java Documentation, url: https://docs.oracle.com/en/java/, type: official-documentation, topics: [java] }
+  - { id: cppreference, title: cppreference, url: https://en.cppreference.com/, type: community-reference, topics: [cpp, c] }
+  - { id: rust-book, title: The Rust Programming Language, url: https://doc.rust-lang.org/book/, type: official-documentation, topics: [rust] }
+  - { id: go-docs, title: Go Documentation, url: https://go.dev/doc/, type: official-documentation, topics: [go] }
+  - { id: dotnet-docs, title: .NET Documentation, url: https://learn.microsoft.com/dotnet/, type: official-documentation, topics: [csharp, dotnet] }
+  - { id: php-manual, title: PHP Manual, url: https://www.php.net/manual/en/, type: official-documentation, topics: [php] }
+  - { id: ruby-docs, title: Ruby Documentation, url: https://www.ruby-lang.org/en/documentation/, type: official-documentation, topics: [ruby] }
+  - { id: swift-docs, title: Swift Documentation, url: https://www.swift.org/documentation/, type: official-documentation, topics: [swift] }
+  - { id: kotlin-docs, title: Kotlin Documentation, url: https://kotlinlang.org/docs/home.html, type: official-documentation, topics: [kotlin] }
+  - { id: dart-docs, title: Dart Documentation, url: https://dart.dev/guides, type: official-documentation, topics: [dart] }
+  - { id: r-project, title: The R Project, url: https://www.r-project.org/other-docs.html, type: official-documentation, topics: [r] }
+  - { id: julia-docs, title: Julia Documentation, url: https://docs.julialang.org/, type: official-documentation, topics: [julia] }
+  - { id: postgres-docs, title: PostgreSQL Documentation, url: https://www.postgresql.org/docs/, type: official-documentation, topics: [sql, databases] }
+  - { id: git-book, title: Pro Git, url: https://git-scm.com/book/en/v2, type: official-book, topics: [git, version-control] }
+  - { id: linux-docs, title: Linux Kernel Documentation, url: https://docs.kernel.org/, type: official-documentation, topics: [linux, systems] }
+  - { id: whatwg-html, title: WHATWG HTML Living Standard, url: https://html.spec.whatwg.org/, type: specification, topics: [html, web] }
+  - { id: csswg-specs, title: CSS Specifications, url: https://www.w3.org/Style/CSS/, type: standards, topics: [css, web] }
+  - { id: owasp-cheatsheets, title: OWASP Cheat Sheet Series, url: https://cheatsheetseries.owasp.org/, type: security-reference, topics: [security, secure-development] }
+policy:
+  default_reuse: link_only_until_licence_verified
+  note: Verify exact terms before quoting, copying, adapting, or redistributing any source material.

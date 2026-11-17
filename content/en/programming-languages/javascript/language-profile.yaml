@@ -1,0 +1,34 @@
+id: javascript
+name: JavaScript
+kind: programming_language
+status: planned
+paradigms:
+  - prototype-based
+  - object-oriented
+  - functional
+  - event-driven
+domains:
+  - web
+  - backend
+  - scripting
+first_release: unknown
+current_stable_version: unknown
+version_reviewed_on: null
+typing_model: dynamic
+execution_model: host- and engine-dependent; distinguish language semantics from browser and server runtimes
+memory_model: automatic memory management; specify engine behaviour only with sourced version scope
+official_homepage: https://developer.mozilla.org/en-US/docs/Web/JavaScript
+official_documentation: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide
+package_ecosystem: npm
+tooling:
+  - Node.js
+  - browser developer tools
+  - npm
+learning_path:
+  beginner: []
+  intermediate: []
+  advanced: []
+sources:
+  - mdn-web-docs
+editorial_notes: >
+  Proposed profile. Distinguish ECMAScript language features from browser APIs and runtime-specific APIs.

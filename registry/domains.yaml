@@ -1,0 +1,50 @@
+schema_version: 1
+domains:
+  - id: "00"
+    slug: core-and-navigation
+    name: Core & Navigation
+    description: Project orientation, learning methods, contribution standards, and navigation.
+  - id: "01"
+    slug: programming-languages
+    name: Programming Languages
+    description: Language guides, syntax, type systems, runtimes, compilers, and ecosystems.
+  - id: "02"
+    slug: computer-science
+    name: Computer Science
+    description: Algorithms, data structures, computation, complexity, and theory.
+  - id: "03"
+    slug: software-engineering
+    name: Software Engineering
+    description: Requirements, design, architecture, testing, reliability, and maintenance.
+  - id: "04"
+    slug: web-and-app-development
+    name: Web & App Development
+    description: Frontend, backend, mobile, APIs, accessibility, and user experience engineering.
+  - id: "05"
+    slug: ai-and-data-science
+    name: AI & Data Science
+    description: Statistics, data engineering, machine learning, and responsible AI.
+  - id: "06"
+    slug: systems-and-networking
+    name: Systems & Networking
+    description: Computer architecture, operating systems, networks, and distributed systems.
+  - id: "07"
+    slug: devops-and-cloud
+    name: DevOps & Cloud
+    description: Automation, delivery, containers, infrastructure, observability, and cloud platforms.
+  - id: "08"
+    slug: cybersecurity
+    name: Cybersecurity
+    description: Defensive security, secure software, cryptography foundations, privacy, and risk.
+  - id: "09"
+    slug: databases
+    name: Databases
+    description: Data modelling, SQL, NoSQL, storage engines, transactions, and distributed data.
+  - id: "10"
+    slug: mathematics
+    name: Mathematics
+    description: Logic, discrete mathematics, linear algebra, probability, and statistics.
+  - id: "11"
+    slug: projects-and-research
+    name: Projects & Research
+    description: Guided projects, case studies, scientific reasoning, and research literacy.
