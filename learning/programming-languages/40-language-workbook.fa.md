@@ -418,20 +418,6 @@ func _initialize() -> void:
     quit()
 ```
 
-### 38. GLSL
-
-**Main use:** GPU shaders  
-**File:** `glsl`
-
-```glsl
-// Fragment-shader example: output a solid color.
-#version 330 core
-out vec4 FragColor;
-void main() {
-    FragColor = vec4(0.2, 0.6, 1.0, 1.0);
-}
-```
-
 ### 39. Vyper
 
 **Main use:** smart contracts  
