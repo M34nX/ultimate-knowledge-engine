@@ -22,7 +22,7 @@ The repository is the canonical source of truth. A future website will be genera
 
 ## Current stage
 
-**Foundation / v0.1.0 — initial construction.** The architecture and standards are being established. Planned features and registry entries do not imply that all lessons, translations, or applications already exist.
+**Foundation / v0.1.0 — initial construction.** The architecture and standards are established as a starting point. Planned features and registry entries do not imply that every lesson, translation, or application already exists.
 
 | Dimension | Long-term target |
 |---|---|
@@ -53,7 +53,7 @@ See [PROJECT-STATUS.md](PROJECT-STATUS.md) and [the roadmap](docs/roadmap.md).
 | 10 | Mathematics | Discrete mathematics, logic, statistics |
 | 11 | Projects & Research | Guided projects, case studies, research literacy |
 
-The registry distinguishes programming languages from markup, query, configuration, and interface technologies.
+The [domain registry](registry/domains.yaml) defines the canonical taxonomy. Each initial locale has a landing page for all 12 domains.
 
 ## Language coverage
 
@@ -65,7 +65,7 @@ See [registry/languages.yaml](registry/languages.yaml). Registry inclusion means
 
 Each concept has a stable identity independent of its display language. English is the initial technical reference locale; Persian is a first-class initial locale. Other locales can be added without changing concept IDs.
 
-Planned locales include Spanish, French, German, Portuguese, Simplified Chinese, Japanese, Korean, Russian, Turkish, Arabic, Hindi, Italian, Dutch, Polish, Ukrainian, Indonesian, and more. Translation status must be explicit: missing or unreviewed text must never be presented as complete.
+The locale registry contains initial English and Persian plus 23 planned additional locales. Translation status must be explicit: missing or unreviewed text must never be presented as complete.
 
 ## Quality principles
 
@@ -87,6 +87,7 @@ Read the [editorial policy](docs/editorial-policy.md), [source standard](docs/st
 - `dictionary/` — terminology, concepts, syntax, built-ins, and errors.
 - `learning/` — roadmaps, courses, exercises, assessments, and projects.
 - `registry/` — machine-readable domains, languages, locales, and resources.
+- `knowledge-graph/` — stable concept nodes and typed relationships.
 - `schemas/` — validation contracts for structured content.
 - `templates/` — reusable authoring templates.
 - `references/` — curated external sources and learning resources.
@@ -94,7 +95,6 @@ Read the [editorial policy](docs/editorial-policy.md), [source standard](docs/st
 - `apps/` — future web encyclopedia and supporting applications.
 - `scripts/` — validation, indexing, and maintenance tooling.
 - `tests/` — structural, content, translation, and code-example checks.
-- `examples/` — self-contained demonstrations.
 
 ## Quick start
 
@@ -104,9 +104,7 @@ Read the [editorial policy](docs/editorial-policy.md), [source standard](docs/st
 4. Check [CONTRIBUTING.md](CONTRIBUTING.md).
 5. Submit focused changes with sources and version information.
 
-## Scope and non-goals
-
-UKE is a curated knowledge system, not an indiscriminate mirror of other repositories, books, courses, or documentation sites. It will not claim exhaustive coverage before material is authored and reviewed. It will not execute arbitrary user code on the production website. AI-assisted material, if introduced, will require human editorial review.
+For local foundation checks, install [requirements-dev.txt](requirements-dev.txt) and run `python scripts/validate_structure.py`.
 
 ## Licence
 
