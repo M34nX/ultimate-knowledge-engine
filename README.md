@@ -65,7 +65,7 @@ See [registry/languages.yaml](registry/languages.yaml). Registry inclusion means
 
 Each concept has a stable identity independent of its display language. English is the initial technical reference locale; Persian is a first-class initial locale. Other locales can be added without changing concept IDs.
 
-The locale registry contains initial English and Persian plus 23 planned additional locales. Translation status must be explicit: missing or unreviewed text must never be presented as complete.
+The locale registry contains initial English and Persian plus 25 planned additional locales. Translation status must be explicit: missing or unreviewed text must never be presented as complete.
 
 ## Quality principles
 
