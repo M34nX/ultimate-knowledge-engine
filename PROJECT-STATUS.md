@@ -14,6 +14,7 @@ This page distinguishes published foundations from work in progress. A listed ca
 - Editorial, source, translation, accessibility, and contribution standards.
 - Initial content schemas and templates.
 - English and Persian starter content.
+- A structured Persian Python curriculum with 17 linked lessons, a dedicated roadmap, three answer-supported exercises, and a capstone project brief. All course material remains Draft pending technical execution and human review.
 - Build from Scratch starter tracks for AI, 2D game development, and operating-system concepts.
 - Additional bilingual draft tracks for database engines, compilers, local network services, and search engines.
 - A direct-link academy catalogue with planned categories clearly separated from available draft lessons.
@@ -23,6 +24,7 @@ This page distinguishes published foundations from work in progress. A listed ca
 
 ## In progress for v0.2.0
 
+- Execute, review, and improve the Persian Python curriculum; add verified tests and expand course coverage.
 - Expand and review the Build from Scratch curriculum.
 - Improve README navigation and repository presentation.
 - Extend automated checks to external-link health, deeper translation parity, executable code examples, and pinned toolchains.
