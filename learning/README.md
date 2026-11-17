@@ -18,6 +18,9 @@ The learning layer turns reference knowledge into sequenced learning experiences
 - [40-language workbook — English](programming-languages/40-language-workbook.md)
 - [دفترچه ۴۰ زبان — فارسی](programming-languages/40-language-workbook.fa.md)
 - **[دورهٔ پایتون از صفر تا سطح میانی — ۱۷ درس فارسی](../content/fa/programming-languages/python/README.md)**
+- [دورهٔ الگوریتم و ساختمان داده — ۶ درس فارسی](../content/fa/computer-science/algorithms/README.md)
+- [دورهٔ مبانی SQL و پایگاه داده — ۶ درس فارسی](../content/fa/databases/sql-fundamentals/README.md)
+- [دورهٔ مبانی توسعهٔ وب — ۵ درس فارسی](../content/fa/web-and-app-development/web-foundations/README.md)
 - [نقشهٔ راه پایتون](roadmaps/python-from-zero.fa.md)
 - [نقشهٔ توسعهٔ آموزشی ۱۲ حوزه](../docs/curriculum-blueprint.fa.md)
 
