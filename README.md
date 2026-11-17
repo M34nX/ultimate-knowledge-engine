@@ -43,7 +43,11 @@ The repository is canonical. A future website is intended to be generated from t
 
 ## 40 programming languages
 
-Learn with categorized examples across 40 programming languages, with English and Persian workbooks: [40-language workbook](learning/programming-languages/40-language-workbook.md) · [دفترچه فارسی](learning/programming-languages/40-language-workbook.fa.md).
+Learn with categorized examples across 40 programming languages, with English and Persian workbooks: [40-language workbook](learning/programming-languages/40-language-workbook.md) · [دفترچه فارسی](learning/programming-languages/40-language-workbook.fa.md). These are introductory examples, not 40 complete courses.
+
+## Complete Persian Python course
+
+A structured **17-lesson** path from beginner foundations to intermediate Python, with practice exercises, a learning roadmap, and a capstone project: [Open the course](content/fa/programming-languages/python/README.md) · [Curriculum blueprint for all 12 domains](docs/curriculum-blueprint.fa.md).
 
 ## Build from Scratch Academy
 
