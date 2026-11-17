@@ -1,5 +1,11 @@
 # ULTIMATE KNOWLEDGE ENGINE
 
+<p align="center">
+  <img src="assets/brand/uke-symbol.svg" alt="UKE Cyber Blue symbol" width="112" />
+</p>
+
+<p align="center"><strong>Cyber Blue</strong> · The visual identity for the UKE knowledge ecosystem · <a href="docs/brand-system.md">Brand system</a></p>
+
 **The Complete Multilingual Programming & Computer Science Knowledge System**
 
 > One Knowledge Base. Multiple Learning Experiences. Global Knowledge.
