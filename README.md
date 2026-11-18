@@ -15,6 +15,7 @@
   <a href="START-HERE.md">Start here</a> ·
   <a href="learning/README.md">Learning academy</a> ·
   <a href="docs/roadmap.md">Roadmap</a> ·
+  <a href="docs/architecture/agent-review-system.md">Agent review architecture</a> ·
   <a href="CONTRIBUTING.md">Contribute</a>
 </p>
 
@@ -40,6 +41,7 @@ The repository is canonical. A future website is intended to be generated from t
 - **I want to explore a subject:** choose one of the [12 knowledge domains](#knowledge-map).
 - **I want to contribute:** read [Contributing](CONTRIBUTING.md) and the [editorial policy](docs/editorial-policy.md).
 - **I want to understand the project:** read [Start Here](START-HERE.md), [Project Status](PROJECT-STATUS.md), and the [Roadmap](docs/roadmap.md).
+- **I want to understand the proposed multi-agent review model:** read the [50-agent work and verification architecture](docs/architecture/agent-review-system.md).
 
 ## 40 programming languages
 
@@ -106,7 +108,7 @@ The project is under active construction. A registry entry or draft lesson does 
 - `schemas/` — validation contracts for structured content.
 - `templates/` — reusable authoring templates.
 - `references/` — curated external sources and learning resources.
-- `docs/` — architecture, governance, standards, and roadmap.
+- `docs/` — architecture, governance, standards, and roadmap, including the proposed [50-agent review design](docs/architecture/agent-review-system.md).
 - `apps/` — future web encyclopedia and supporting applications.
 - `scripts/` and `tests/` — validation and maintenance tooling.
 
