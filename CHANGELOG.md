@@ -4,6 +4,10 @@ All notable project changes are recorded here. The format follows Keep a Changel
 
 ## Unreleased — next release candidate
 
+- Add a proposed 50-role agent-assisted work and verification architecture, with 40 delivery roles and 10 independent verification roles; explicitly document that no agent runtime is implemented.
+- Add a clear review contract, evidence requirements, approval gates, and human-maintainer boundaries for future agent-assisted changes.
+- Add a README entry point for the proposed agent review architecture.
+
 - Add a dedicated project metadata schema and structured English/Persian frontmatter for all seven Build from Scratch tracks.
 - Extend the structural validator to check project objectives, prerequisites, milestones, locale/domain references, and stable translation IDs.
 
