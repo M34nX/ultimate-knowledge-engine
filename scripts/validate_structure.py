@@ -82,17 +82,18 @@ def validate_content(
                 add_error(f"Frontmatter must be a mapping: {path.relative_to(ROOT)}")
                 continue
     
-            schema_name = CONTENT_SCHEMAS.get(metadata.get("content_type"))
+            content_type = metadata.get("content_type")
+            schema_name = CONTENT_SCHEMAS.get(content_type) if isinstance(content_type, str) else None
             if schema_name is None:
                 add_error(f"Unknown content_type in {path.relative_to(ROOT)}")
                 continue
-    
+
             validator = validators.get(schema_name)
             if validator is not None:
                 for issue in validator.iter_errors(metadata):
                     location = ".".join(str(part) for part in issue.path)
                     add_error(f"{path.relative_to(ROOT)} [{location}]: {issue.message}")
-    
+
             content_id = metadata.get("id")
             locale = metadata.get("locale")
             domain = metadata.get("domain")
@@ -102,14 +103,20 @@ def validate_content(
                     add_error(f"Duplicate content ID/locale pair: {content_id} ({locale})")
                 seen.add(key)
                 ids_by_locale[locale].add(content_id)
-    
-            if locale not in valid_locales:
+
+            if not isinstance(locale, str) or locale not in valid_locales:
                 add_error(f"Unknown locale in {path.relative_to(ROOT)}: {locale}")
-            if domain not in valid_domains:
+            if not isinstance(domain, str) or domain not in valid_domains:
                 add_error(f"Unknown domain in {path.relative_to(ROOT)}: {domain}")
-    
-            for source_id in metadata.get("sources", []):
-                if source_id not in valid_sources:
+
+            source_ids = metadata.get("sources", [])
+            if not isinstance(source_ids, list):
+                add_error(f"Sources must be a list in {path.relative_to(ROOT)}")
+                source_ids = []
+            for source_id in source_ids:
+                if not isinstance(source_id, str):
+                    add_error(f"Source IDs must be strings in {path.relative_to(ROOT)}")
+                elif source_id not in valid_sources:
                     add_error(f"Unknown source ID '{source_id}' in {path.relative_to(ROOT)}")
     
     return ids_by_locale
