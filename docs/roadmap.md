@@ -16,6 +16,7 @@ This roadmap is directional. Items become commitments only when an issue or mile
 - Translation parity checks.
 - Code-example test harness for supported languages.
 - Automated quality reports.
+- Define evidence-based review contracts and independent quality gates for content and code.
 
 ## Phase 3 — Reference content
 
@@ -49,6 +50,7 @@ This roadmap is directional. Items become commitments only when an issue or mile
 - AI-assisted explanations with source grounding and clear limitations.
 - Adaptive learning recommendations.
 - Offline and research-oriented capabilities.
+- Evaluate a secure agent runtime for the proposed 40 delivery roles and 10 independent verification roles; do not treat the documented design as an implemented capability.
 
 ## Prioritisation
 
