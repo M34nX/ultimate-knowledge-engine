@@ -76,5 +76,38 @@ class InternalMarkdownLinkTests(unittest.TestCase):
         self.assertEqual(validator.ERRORS, [])
 
 
+    def test_malformed_content_type_is_reported_without_crashing(self) -> None:
+        self.write(
+            "content/en/programming-languages/example.md",
+            "---\ncontent_type: []\nid: sample.lesson\nlocale: en\ndomain: programming-languages\n---\n",
+        )
+
+        validator.validate_content({}, {"en"}, {"programming-languages"}, set())
+
+        self.assertTrue(any("Unknown content_type" in error for error in validator.ERRORS))
+
+    def test_malformed_locale_domain_and_source_ids_are_reported(self) -> None:
+        self.write(
+            "content/en/programming-languages/example.md",
+            "---\ncontent_type: lesson\nid: sample.lesson\nlocale: []\ndomain: {}\nsources: [42]\n---\n",
+        )
+
+        validator.validate_content({}, {"en"}, {"programming-languages"}, {"known"})
+
+        self.assertTrue(any("Unknown locale" in error for error in validator.ERRORS))
+        self.assertTrue(any("Unknown domain" in error for error in validator.ERRORS))
+        self.assertTrue(any("Source IDs must be strings" in error for error in validator.ERRORS))
+
+    def test_null_sources_are_reported_without_crashing(self) -> None:
+        self.write(
+            "content/en/programming-languages/example.md",
+            "---\ncontent_type: lesson\nid: sample.lesson\nlocale: en\ndomain: programming-languages\nsources: null\n---\n",
+        )
+
+        validator.validate_content({}, {"en"}, {"programming-languages"}, set())
+
+        self.assertTrue(any("Sources must be a list" in error for error in validator.ERRORS))
+
+
 if __name__ == "__main__":
     unittest.main()
