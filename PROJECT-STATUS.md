@@ -33,6 +33,7 @@ This page distinguishes published foundations from work in progress. A listed ca
 - Expand the project schema and metadata validation as the academy adds more project tracks.
 - Verify all new external references and technical examples.
 - Establish release notes and a repeatable release checklist.
+- Specify the proposed 50-role agent architecture: 40 delivery roles plus 10 independent verification roles. This is documentation only; no agent runtime or automated multi-agent execution is delivered.
 
 ## Planned, not yet delivered
 
@@ -43,6 +44,7 @@ This page distinguishes published foundations from work in progress. A listed ca
 - Interactive code execution and visual simulators.
 - Learner accounts, progress tracking, and adaptive learning.
 - AI-assisted tutoring.
+- Agent runtime, model routing, secure tool execution, and independent automated reviewers.
 - Comprehensive automated validation and CI coverage beyond the current structural checks.
 
 ## Definition of done
