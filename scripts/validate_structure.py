@@ -28,12 +28,58 @@ def add_error(message: str) -> None:
 ERRORS: list[str] = []
 
 
-def read_yaml(path: Path) -> Any:
+def read_text(path: Path) -> str | None:
     try:
-        return yaml.safe_load(path.read_text(encoding="utf-8"))
-    except (OSError, yaml.YAMLError) as exc:
+        return path.read_text(encoding="utf-8")
+    except (OSError, UnicodeError) as exc:
+        add_error(f"Unable to read {path.relative_to(ROOT)}: {exc}")
+        return None
+
+
+def read_yaml(path: Path) -> Any:
+    text = read_text(path)
+    if text is None:
+        return None
+    try:
+        return yaml.safe_load(text)
+    except yaml.YAMLError as exc:
         add_error(f"Invalid YAML {path.relative_to(ROOT)}: {exc}")
         return None
+
+
+def read_mapping(path: Path) -> dict[str, Any]:
+    value = read_yaml(path)
+    if value is None:
+        return {}
+    if not isinstance(value, dict):
+        add_error(f"Top-level YAML must be a mapping: {path.relative_to(ROOT)}")
+        return {}
+    return value
+
+
+def read_mapping_list(data: dict[str, Any], key: str, path: Path) -> list[dict[str, Any]]:
+    value = data.get(key)
+    if not isinstance(value, list):
+        add_error(f"Registry field '{key}' must be a list: {path.relative_to(ROOT)}")
+        return []
+    mappings: list[dict[str, Any]] = []
+    for index, item in enumerate(value):
+        if not isinstance(item, dict):
+            add_error(f"Registry field '{key}' entry {index} must be a mapping: {path.relative_to(ROOT)}")
+            continue
+        mappings.append(item)
+    return mappings
+
+
+def string_values(items: list[dict[str, Any]], key: str, path: Path, label: str) -> list[str]:
+    values: list[str] = []
+    for index, item in enumerate(items):
+        value = item.get(key)
+        if not isinstance(value, str) or not value.strip():
+            add_error(f"{label} entry {index} must contain a non-empty string '{key}': {path.relative_to(ROOT)}")
+            continue
+        values.append(value)
+    return values
 
 
 def load_schemas() -> dict[str, Draft202012Validator]:
@@ -61,7 +107,9 @@ def validate_content(
     content_roots = (ROOT / "content", ROOT / "learning" / "build-from-scratch")
     for content_root in content_roots:
         for path in sorted(content_root.rglob("*.md")):
-            text = path.read_text(encoding="utf-8")
+            text = read_text(path)
+            if text is None:
+                continue
             match = FRONTMATTER.match(text)
             if not match:
                 try:
@@ -82,17 +130,18 @@ def validate_content(
                 add_error(f"Frontmatter must be a mapping: {path.relative_to(ROOT)}")
                 continue
     
-            schema_name = CONTENT_SCHEMAS.get(metadata.get("content_type"))
+            content_type = metadata.get("content_type")
+            schema_name = CONTENT_SCHEMAS.get(content_type) if isinstance(content_type, str) else None
             if schema_name is None:
                 add_error(f"Unknown content_type in {path.relative_to(ROOT)}")
                 continue
-    
+
             validator = validators.get(schema_name)
             if validator is not None:
                 for issue in validator.iter_errors(metadata):
                     location = ".".join(str(part) for part in issue.path)
                     add_error(f"{path.relative_to(ROOT)} [{location}]: {issue.message}")
-    
+
             content_id = metadata.get("id")
             locale = metadata.get("locale")
             domain = metadata.get("domain")
@@ -102,14 +151,20 @@ def validate_content(
                     add_error(f"Duplicate content ID/locale pair: {content_id} ({locale})")
                 seen.add(key)
                 ids_by_locale[locale].add(content_id)
-    
-            if locale not in valid_locales:
+
+            if not isinstance(locale, str) or locale not in valid_locales:
                 add_error(f"Unknown locale in {path.relative_to(ROOT)}: {locale}")
-            if domain not in valid_domains:
+            if not isinstance(domain, str) or domain not in valid_domains:
                 add_error(f"Unknown domain in {path.relative_to(ROOT)}: {domain}")
-    
-            for source_id in metadata.get("sources", []):
-                if source_id not in valid_sources:
+
+            source_ids = metadata.get("sources", [])
+            if not isinstance(source_ids, list):
+                add_error(f"Sources must be a list in {path.relative_to(ROOT)}")
+                source_ids = []
+            for source_id in source_ids:
+                if not isinstance(source_id, str):
+                    add_error(f"Source IDs must be strings in {path.relative_to(ROOT)}")
+                elif source_id not in valid_sources:
                     add_error(f"Unknown source ID '{source_id}' in {path.relative_to(ROOT)}")
     
     return ids_by_locale
@@ -121,7 +176,9 @@ def validate_internal_links() -> int:
     for path in sorted(ROOT.rglob("*.md")):
         if any(part.startswith(".") for part in path.relative_to(ROOT).parts):
             continue
-        text = path.read_text(encoding="utf-8")
+        text = read_text(path)
+        if text is None:
+            continue
         text = re.sub(fence + r".*?" + fence, "", text, flags=re.DOTALL)
         for match in MARKDOWN_LINK.finditer(text):
             target = unquote(match.group(1))
@@ -187,7 +244,9 @@ def validate_programming_workbooks(language_ids: set[str]) -> int:
         if not path.is_file():
             add_error(f"Missing {locale} programming-language workbook: {path.relative_to(ROOT)}")
             continue
-        text = path.read_text(encoding="utf-8")
+        text = read_text(path)
+        if text is None:
+            continue
         headings = list(WORKBOOK_HEADINGS.finditer(text))
         numbers = [int(m.group(1)) for m in headings]
         names = [m.group(2).strip() for m in headings]
@@ -219,32 +278,41 @@ def validate_programming_workbooks(language_ids: set[str]) -> int:
 
 def main() -> int:
     validators = load_schemas()
-    domains_data = read_yaml(ROOT / "registry" / "domains.yaml") or {}
-    languages_data = read_yaml(ROOT / "registry" / "languages.yaml") or {}
-    locales_data = read_yaml(ROOT / "registry" / "locales.yaml") or {}
-    resources_data = read_yaml(ROOT / "registry" / "resources.yaml") or {}
-    graph_nodes = read_yaml(ROOT / "knowledge-graph" / "concepts.yaml") or {}
-    graph_edges = read_yaml(ROOT / "knowledge-graph" / "relationships.yaml") or {}
 
-    domains = domains_data.get("domains", [])
-    languages = languages_data.get("entries", [])
-    initial_locales = locales_data.get("initial_locales", [])
-    planned_locales = locales_data.get("planned_locales", [])
-    resources = resources_data.get("resources", [])
-    nodes = graph_nodes.get("nodes", [])
-    edges = graph_edges.get("relationships", [])
+    domains_path = ROOT / "registry" / "domains.yaml"
+    languages_path = ROOT / "registry" / "languages.yaml"
+    locales_path = ROOT / "registry" / "locales.yaml"
+    resources_path = ROOT / "registry" / "resources.yaml"
+    graph_nodes_path = ROOT / "knowledge-graph" / "concepts.yaml"
+    graph_edges_path = ROOT / "knowledge-graph" / "relationships.yaml"
 
-    domain_slugs = {item.get("slug") for item in domains if isinstance(item, dict)}
-    locale_tags = {item.get("tag") for item in [*initial_locales, *planned_locales] if isinstance(item, dict)}
-    source_ids = {item.get("id") for item in resources if isinstance(item, dict)}
-    language_ids = [item.get("id") for item in languages if isinstance(item, dict)]
-    node_ids = {item.get("id") for item in nodes if isinstance(item, dict)}
+    domains_data = read_mapping(domains_path)
+    languages_data = read_mapping(languages_path)
+    locales_data = read_mapping(locales_path)
+    resources_data = read_mapping(resources_path)
+    graph_nodes_data = read_mapping(graph_nodes_path)
+    graph_edges_data = read_mapping(graph_edges_path)
+
+    domains = read_mapping_list(domains_data, "domains", domains_path)
+    languages = read_mapping_list(languages_data, "entries", languages_path)
+    initial_locales = read_mapping_list(locales_data, "initial_locales", locales_path)
+    planned_locales = read_mapping_list(locales_data, "planned_locales", locales_path)
+    resources = read_mapping_list(resources_data, "resources", resources_path)
+    nodes = read_mapping_list(graph_nodes_data, "nodes", graph_nodes_path)
+    edges = read_mapping_list(graph_edges_data, "relationships", graph_edges_path)
+
+    domain_slugs = set(string_values(domains, "slug", domains_path, "Domain"))
+    locale_items = [*initial_locales, *planned_locales]
+    locale_tags = set(string_values(locale_items, "tag", locales_path, "Locale"))
+    source_ids = set(string_values(resources, "id", resources_path, "Resource"))
+    language_ids = string_values(languages, "id", languages_path, "Language")
+    node_ids = set(string_values(nodes, "id", graph_nodes_path, "Knowledge graph node"))
 
     if len(domain_slugs) != len(domains):
         add_error("Domain slugs are missing or duplicated.")
-    if len(locale_tags) != len(initial_locales) + len(planned_locales):
+    if len(locale_tags) != len(locale_items):
         add_error("Locale tags are missing or duplicated.")
-    if len(language_ids) != len(languages):
+    if len(set(language_ids)) != len(languages):
         add_error("Language IDs are missing or duplicated.")
     if len(node_ids) != len(nodes):
         add_error("Knowledge graph node IDs are missing or duplicated.")
@@ -264,13 +332,10 @@ def main() -> int:
                 add_error(f"Language profile not present in registry: {metadata.get('id')}")
 
     for edge in edges:
-        if not isinstance(edge, dict):
-            add_error("Knowledge graph relationship must be a mapping.")
-            continue
-        if edge.get("from") not in node_ids:
-            add_error(f"Unknown graph source node: {edge.get('from')}")
-        if edge.get("to") not in node_ids:
-            add_error(f"Unknown graph target node: {edge.get('to')}")
+        for endpoint, label in (("from", "source"), ("to", "target")):
+            value = edge.get(endpoint)
+            if not isinstance(value, str) or value not in node_ids:
+                add_error(f"Unknown graph {label} node: {value}")
 
     for relative in (
         "README.md", "START-HERE.md", "CONTRIBUTING.md",
@@ -320,7 +385,6 @@ def main() -> int:
     print(f" - {checked_links} internal Markdown links checked")
     print(f" - {validated_workbook_examples} examples checked in each programming-language workbook")
     return 0
-
 
 if __name__ == "__main__":
     sys.exit(main())

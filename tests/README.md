@@ -2,16 +2,29 @@
 
 Tests protect content integrity, not merely application behaviour.
 
-## Automated checks currently run in GitHub Actions
+## Run locally
 
-Run locally:
-
-```
+```bash
 python -m pip install -r requirements-dev.txt
+python -m unittest discover -s tests -p 'test_*.py'
 python scripts/validate_structure.py
 ```
 
-The validator currently checks:
+## Automated checks
+
+GitHub Actions runs the validator unit tests before the repository-wide structural validation.
+
+The unit tests currently cover Markdown-link validation:
+
+- Valid relative file links.
+- Directory links resolving to `README.md`.
+- Broken internal links.
+- Links that attempt to escape the repository root.
+- External links, fragment-only links, and links inside fenced code blocks.
+- Malformed content metadata types (content type, locale, domain, and source IDs) are reported without crashing the validator.
+- Invalid UTF-8 files, non-mapping registry roots, non-list registry collections, non-mapping collection entries, and non-string registry IDs are reported instead of causing type errors.
+
+The repository validator checks:
 
 - YAML registry and knowledge-graph files parse successfully.
 - All seven JSON Schemas are valid JSON Schema Draft 2020-12 documents.
