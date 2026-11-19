@@ -22,6 +22,7 @@ The unit tests currently cover Markdown-link validation:
 - Links that attempt to escape the repository root.
 - External links, fragment-only links, and links inside fenced code blocks.
 - Malformed content metadata types (content type, locale, domain, and source IDs) are reported without crashing the validator.
+- Invalid UTF-8 files, non-mapping registry roots, non-list registry collections, non-mapping collection entries, and non-string registry IDs are reported instead of causing type errors.
 
 The repository validator checks:
 
