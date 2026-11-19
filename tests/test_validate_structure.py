@@ -109,5 +109,47 @@ class InternalMarkdownLinkTests(unittest.TestCase):
         self.assertTrue(any("Sources must be a list" in error for error in validator.ERRORS))
 
 
+    def test_read_yaml_reports_invalid_utf8_without_crashing(self) -> None:
+        path = self.root / "broken.yaml"
+        path.write_bytes(b"\xff")
+
+        self.assertIsNone(validator.read_yaml(path))
+        self.assertTrue(any("Unable to read" in error for error in validator.ERRORS))
+
+    def test_read_mapping_rejects_non_mapping_root(self) -> None:
+        path = self.write("registry.yaml", "- item\\n- item-two\\n")
+
+        self.assertEqual(validator.read_mapping(path), {})
+        self.assertTrue(any("Top-level YAML must be a mapping" in error for error in validator.ERRORS))
+
+    def test_registry_collection_rejects_non_list_and_non_mapping_entries(self) -> None:
+        path = self.write("registry.yaml")
+        self.assertEqual(validator.read_mapping_list({"items": None}, "items", path), [])
+        self.assertTrue(any("must be a list" in error for error in validator.ERRORS))
+
+        validator.ERRORS = []
+        self.assertEqual(
+            validator.read_mapping_list({"items": [{"id": "valid"}, 42]}, "items", path),
+            [{"id": "valid"}],
+        )
+        self.assertTrue(any("entry 1 must be a mapping" in error for error in validator.ERRORS))
+
+    def test_string_values_filter_blank_and_non_string_ids(self) -> None:
+        path = self.write("registry.yaml")
+        values = validator.string_values(
+            [{"id": "valid"}, {"id": []}, {"id": " "}],
+            "id",
+            path,
+            "Resource",
+        )
+
+        self.assertEqual(values, ["valid"])
+        self.assertEqual(len(validator.ERRORS), 2)
+
+    def test_read_text_reports_missing_file(self) -> None:
+        self.assertIsNone(validator.read_text(self.root / "missing.md"))
+        self.assertTrue(any("Unable to read" in error for error in validator.ERRORS))
+
+
 if __name__ == "__main__":
     unittest.main()
