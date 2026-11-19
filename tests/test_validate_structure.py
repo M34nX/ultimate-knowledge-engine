@@ -117,7 +117,7 @@ class InternalMarkdownLinkTests(unittest.TestCase):
         self.assertTrue(any("Unable to read" in error for error in validator.ERRORS))
 
     def test_read_mapping_rejects_non_mapping_root(self) -> None:
-        path = self.write("registry.yaml", "- item\\n- item-two\\n")
+        path = self.write("registry.yaml", "- item\n- item-two\n")
 
         self.assertEqual(validator.read_mapping(path), {})
         self.assertTrue(any("Top-level YAML must be a mapping" in error for error in validator.ERRORS))
